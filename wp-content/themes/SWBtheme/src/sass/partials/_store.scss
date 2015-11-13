@@ -1,0 +1,625 @@
+.mainstoreheader {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	padding-left: 1em;
+	padding-right: 1em;
+	background-image: url(#{$path--rel}/images/shop-header-mobile.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	@include bp(bp-m) {
+		background-image: url(#{$path--rel}/images/shop-header-tablet.jpg);
+	}
+
+	@include bp(bp-l) {
+		background-image: url(#{$path--rel}/images/shop-header-desktop.jpg);
+	}
+
+	h2,
+	p {
+		color: $white;
+		text-align: center;
+	}
+
+	h2 {
+		text-transform: uppercase;
+		font-size: em(30px);
+		background-image: url(#{$path--rel}/images/circletree.png);
+		background-position: top center;
+		background-repeat: no-repeat;
+		padding-top: 90px;
+
+		@include bp(bp-m) {
+			font-size: em(50px);
+		}
+
+		@include bp(bp-l) {
+			font-size: em(70px);
+		}
+	}
+
+	p {
+		font-size: em(24px);
+		margin-bottom: 0;
+
+		@include bp(bp-m) {
+			font-size: em(30px);
+			@extend %center-block;
+			max-width: 500px;
+		}
+		@include bp(bp-l) {
+			max-width: 650px;
+			font-size: em(36px);
+		}
+	}
+
+}
+
+.mainstore {
+
+	&__container {
+
+		@extend %grid-container;
+		@include bp(bp-s-o) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		@include bp(bp-m-o) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+
+		.productslist {
+			@extend %grid-container;
+			@include bp(bp-s-o) {
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+			@include bp(bp-m-o) {
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+			&__item {
+				@include span(4);
+				margin-bottom: gutter(4);
+
+				@include sbp() {
+					@include span(3);
+					margin-bottom: gutter(9);
+
+					&:nth-of-type(3n + 3) {
+						@include last;
+					}
+				}
+
+				@include sbp(su-l, 12) {
+
+					@include span(4);
+					margin-bottom: gutter(12);
+
+					&:nth-of-type(3n + 3) {
+						@include last;
+					}
+
+				}
+
+			}
+		}
+
+		.productslist {
+			&__item {
+
+				a {
+					display: block;
+					position: relative;
+
+					h3 {
+						width: 100%;
+		  				height: 50%;
+		  				margin: auto;
+						position: absolute;
+						padding: 15%;
+						top: 0;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						color: $white;
+						text-align: center;
+						background-color: rgba($black, 0.6);
+						transition: all 0.4s;
+
+						@include bp(bp-s-o) {
+							font-size: em(28px);
+						}
+
+						@include bp(bp-m) {
+							padding: 10%;
+						}
+
+						@include bp(bp-l) {
+							padding: 1em;
+						}
+
+						&:hover {
+							color: $color-secondary;
+						}
+
+						span {
+							text-transform: uppercase;
+							font-size: 1.1em;
+						}
+
+						.count {
+							display: none;
+						}
+					}
+				}
+			}
+
+			// These are the styles for every fourth category on the shop page. //
+
+			&__lessons {
+				background-image: url(#{$path--rel}/images/shop-golflessons.jpg);
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: cover;
+				height: 199px;
+				width: 100%;
+				a {
+					width: 100%;
+					height: 199px;
+
+					h3 {
+						height: 50%;
+						background-color: rgba($black, 0.8);
+						padding: 5%;
+
+						@include bp(bp-m-o) {
+							padding: 2.25%;
+							height: 50%;
+						}
+
+						@include bp(bp-l) {
+							padding: 0.4em;
+						}
+					}
+
+					img {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+/*
+*
+*
+*
+* The header image of the accessories, membership, events and lessons page styles
+*
+*
+*
+*/
+
+.accessoriesheader {
+	@include shopcatheader(accessories);
+}
+
+.golflessonssheader {
+	@include shopcatheader(lessons);
+}
+
+.shopmembershipheader {
+	@include shopcatheader(membership);
+}
+
+.shopeventsheader {
+	@include shopcatheader(events);
+}
+
+
+/*
+*
+*
+*
+* The styles for displying the categories on the top below the main image on all shop pages.
+*
+*
+*
+*/
+
+.woodsinglecat {
+	background-color: $color-secondary;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	&__container {
+		@include bp(bp-m) {
+			display: flex;
+			justify-content: center;
+		}
+
+		h3,
+		ul {
+			text-align: center;
+			display: block;
+			@include bp(bp-m) {
+				display: inline-block;
+			}
+		}
+
+		h3 {
+			color: $color-primary;
+			font-size: em(20px);
+
+			@include bp(bp-m) {
+				font-variant: small-caps;
+				font-size: em(28px);
+				margin-right: 1%;
+			}
+
+			@include bp(bp-l) {
+				font-size: em(32px);
+			}
+		}
+
+		ul {
+			margin-top: 1em;
+			margin-bottom: 1em;
+			li {
+				display: block;
+				padding-top: 0.75em;
+				padding-bottom: 0.75em;
+				@include bp(bp-m) {
+					display: inline-block;
+					padding-top: 0.5em;
+					padding-bottom: 0.5em;
+				}
+
+				&::after {
+					@include bp(bp-m) {
+						content: '|';
+					}
+				}
+
+				&:last-of-type::after {
+					@include bp(bp-m) {
+						content: '';
+					}
+				}
+
+				a {
+					color: $white;
+					text-transform: uppercase;
+					transition: all 0.4s;
+					padding: 0.25em 0.5em;
+					font-size: em(14px);
+
+					@include bp(bp-m) {
+						font-size: em(16px);
+					}
+
+					&:hover {
+						color: $color-shadow3;
+					}
+				}
+
+			}
+		}
+	}	
+}
+
+
+
+
+
+
+// These are the styles for displaying the products on every product category 
+// shop page. This is the containers that surround the woocommerce content tag.
+
+
+
+.insideproducts {
+	&__container {
+		@extend %grid-container;
+
+		@include bp(bp-s-o) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		&--list {
+			@extend %grid-container;
+			display: flex;
+			flex-wrap: wrap;
+			li {
+				@include span(4);
+				margin-bottom: gutter(4);
+				position: relative;
+				padding-bottom: 75px;
+
+				@include sbp() {
+					@include span(3);
+					margin-bottom: gutter(9);
+					&:nth-of-type(3n + 3) {
+						@include last;
+					}
+				}
+
+				@include sbp(su-l, 12) {
+					@include span(4);
+					margin-bottom: gutter(12);
+					&:nth-of-type(3n + 3) {
+						@include last;
+					}
+				}
+
+				h3 {
+					color: $color-primary;
+					text-align: center;
+					font-family: $font-family--primary;
+					font-variant: small-caps;
+					transition: all 0.4s;
+
+					&:hover {
+						color: $color-secondary;
+					}
+				}
+
+				.price {
+					display: block;
+					width: 100%;
+					text-align: center;
+					font-size: em(18px);
+					margin-bottom: 1em;
+					color: $color-primary;
+					transition: all 0.4s;
+
+					&:hover {
+						color: $color-secondary;
+					}
+				}
+
+				.more_info_button {
+					font-size: em(14px);
+					font-weight: $font-weight--bold;
+					text-align: center;
+					display: block;
+					border-radius: 2px;
+					background-color: $white;
+					color: $color-primary;
+					text-transform: uppercase;
+					transition: all 0.4s;
+
+					&:hover {
+						color: $color-secondary;
+					}
+					
+				}
+
+				.add_to_cart_button {
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					left: 0;
+					text-align: center;
+					display: block;
+					border-radius: 2px;
+					border: 4px solid $black;
+					padding-top: 1.5em;
+					padding-bottom: 1.5em;
+					background-color: $white;
+					color: $grey;
+					text-transform: uppercase;
+					transition: all 0.4s;
+
+					&:hover {
+						background-color: lighten($grey, 35%);
+						color: $black;
+					}
+				}
+
+				.added_to_cart {
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					left: 0;
+					z-index: 5;
+					text-align: center;
+					text-transform: uppercase;
+					border-radius: 2px;
+					display: block;
+					padding-top: 1.24em;
+					padding-bottom: 1.24em;
+					border: 4px solid $color-shadow3;
+					background-color: $white;
+					color: $grey;
+					transition: all 0.4s;
+
+					&:hover {
+						background-color: lighten($grey, 35%);
+						color: $black;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/*
+*
+*
+*
+* Single product page styles start here.
+*
+*
+*
+*/
+
+
+.woodsinglepro {
+
+	&__container {
+		@extend %grid-container;
+
+		.singlewoodside {
+
+			&__container {
+				@extend %grid-container;
+				display: flex;
+				flex-wrap: wrap;
+				padding-left: 0;
+				padding-right: 0;
+				padding-top: 0;
+				padding-bottom: 2em;
+				margin-bottom: 2em;
+				border-bottom: 5px solid $color-primary;
+
+				.images { // The div container that holds all the images
+					@include span(3);
+					margin-left: span(0.5 wide);
+					margin-right: span(0.5 wide);
+
+					@include sbp() {
+						@include span(4);
+						margin-left: 0;
+					}
+
+					@include sbp(su-l, 12) {
+						@include span(6);
+						margin-left: 0;
+					}
+
+					.wp-post-image {
+						@include span(4);
+					}
+				}
+
+				.entry-summary { // the div container that holds all the product information
+
+					@include span(4);
+
+					@include sbp() {
+						@include span(5 last);
+					}
+
+					@include sbp(su-l, 12) {
+						@include span(6 last);
+					}
+					
+
+					h1 {
+						text-transform: uppercase;
+						font-size: em(24px);
+						text-align: center;
+
+						@include bp(bp-m) {
+							font-size: em(28px);
+						}
+
+						@include bp(bp-l) {
+							font-size: em(32px);
+							text-align: left;
+						}
+					}
+
+					.cart {
+						.quantity {
+							float: none;
+							margin-bottom: 2em;
+							width: 35%;
+							border-radius: 2px;
+							display: block;
+							border: 4px solid $grey;
+							padding: 0.25em;
+
+							.qtytext {
+								display: inline-block;
+								max-width: 40%;
+								color: $color-shadow2;
+								margin-bottom: 0;
+							}
+
+							.input-text {
+								display: inline-block;
+								width: 50%;
+							}
+						}
+
+						.single_add_to_cart_button {
+							text-align: center;
+							text-transform: uppercase;
+							border-radius: 2px;
+							display: block;
+							padding-top: 1.24em;
+							padding-bottom: 1.24em;
+							border: 4px solid $grey;
+							background-color: $white;
+							color: $grey;
+							transition: all 0.4s;
+
+							&:hover {
+								background-color: lighten($grey, 35%);
+								color: $black;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+.gform_body {
+	input,
+	textarea {
+		background-color: rgba($color-secondary, 0.6);
+		border: 1px solid $grey;
+
+		&:focus {
+			background-color: rgba($color-secondary, 0.2);
+		}
+	}
+
+	.gfield_price {
+		border-bottom: 2px solid $color-primary;
+
+		&#field_1_8,
+		&#field_1_11,
+		&#field_1_14,
+		&#field_1_17 {
+			border-top: 2px solid $color-primary;
+		}
+	}
+
+	.gfield {
+		padding-top: 1em;
+		padding-bottom: 1em;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

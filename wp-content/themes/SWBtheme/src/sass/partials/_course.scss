@@ -1,0 +1,641 @@
+.courseheader {
+
+	&__container {
+		@extend %grid-container;
+
+		&--text {
+			@include span(4);
+
+			@include sbp() {
+				@include span(4.5);
+			}
+
+			@include sbp(su-l, 12) {
+				@include span(6);
+			}
+		}
+
+		&--image {
+			@include span(4);
+
+			@include sbp() {
+				@include span(4.5 last);
+			}
+
+			@include sbp(su-l, 12) {
+				@include span(6 last);
+			}
+		}
+	}
+}
+
+.courseheader {
+	background-color: lighten($grey, 20%);
+	color: $white;
+
+	&__container {
+		padding-bottom: 0;
+
+		&--text {
+
+			h1 {
+				text-transform: uppercase;
+				margin-bottom: 0;
+				font-size: em(40px);
+			}
+
+			p {
+				font-size: em(20px);
+				font-weight: $font-weight--light;
+				line-height: 130%;
+			}
+
+			img {
+				margin: 1em;
+			}
+		}
+
+		&--image {
+
+			img {
+				padding: 0;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+.bookingarea {
+
+	&__container {
+		@extend %grid-container;
+
+		&--information {
+			@include span(4);
+
+			@include sbp() {
+				@include span(4.5);
+				margin-right: span(2.25 wide);
+				margin-left: span(2.25 wide);
+			}
+
+			@include sbp(su-l, 12) {
+				@include span(4);
+			}
+		}
+
+		&--teeon {
+			@include span(4);
+
+			@include sbp() {
+				@include span(7 last);
+				margin-right: span(1 wide);
+				margin-left: span(1 wide);
+			}
+
+			@include sbp(su-l, 12) {
+				@include span(8 last);
+			}
+		}
+	}
+}
+
+.bookingarea {
+
+	&__container {
+		text-align: center;
+
+		&--information {
+			padding-top: 0.75em;
+
+			@include bp(bp-s-o) {
+				margin-bottom: 2em;
+			}
+
+			a {
+				@include modernButton();
+				min-width: 230px;
+			}
+		}
+
+		&--teeon {
+			margin-left: auto;
+			margin-right: auto; 
+		}
+	}
+
+	.bookit {
+		background-image: url(#{$path--rel}/front-page/bookit.png);
+		padding-top: 1em;
+		padding-bottom: 1em;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		margin-left: auto;
+		margin-right: auto;
+		border: 4px solid $baby-blue;
+		width: 75%;
+		text-align: center;
+
+		@include bp(bp-m) {
+			width: 50%;
+		}
+
+		@include bp(bp-l) {
+			width: 30%;
+		}
+
+		img {
+			margin: 1em auto;
+		}
+
+		a {
+			@include modernButton();
+		}
+
+		h4 {
+			color: $color-primary;
+			text-transform: uppercase;
+			margin: 0.3em 0.1em;
+			font-size: em(26px);
+
+			@include bp(bp-m) {
+				font-size: em(30px);
+			}
+
+			@include bp(bp-l) {
+				font-size: em(36px);
+			}
+		}
+	}
+
+	&__downloadapp {
+		margin: 2em auto;
+		text-align: center;
+
+		h5 {
+			margin-top: 1em;
+			margin-bottom: 1em;
+			text-transform: uppercase;
+			font-size: em(20px);
+		}
+
+		.appa,
+		.appg {
+			padding: 30px 90px;
+			display: inline-block;
+		}
+
+		.appa {
+			background: url(#{$path--rel}/course/appleapp.png) no-repeat center;
+
+			@include bp(bp-s-o) {
+				margin: 1.5em 3em;
+			}
+
+			@include bp(bp-m) {
+				margin-right: 25px;
+			}
+		}
+
+		.appg {
+			background: url(#{$path--rel}/course/googleplay.png) no-repeat center;
+
+			@include bp(bp-s-o) {
+				margin: 1.5em 3em;
+			}
+
+			@include bp(bp-m) {
+				margin-left: 25px;
+			}	
+		}
+	}
+}
+
+.raincheck {
+
+	&__container {
+		@extend %grid-container;
+
+		&--context {
+			@include span(4);
+
+			@include sbp() {
+				@include span(7);
+				margin-left: span(1 wide);
+				margin-right: span(1 wide);
+			}
+
+			@include sbp(su-l, 12) {
+				@include span(8);
+				margin-left: span(2 wide);
+				margin-right: span(2 wide);
+			}
+		}
+	}
+}
+
+
+.raincheck {
+	background-color: $color-shadow;
+
+	&__container {
+
+		&--context {
+
+			img {
+				margin-top: 1em;
+				margin-bottom: 1em;
+			}
+
+			h3 {
+				margin: 0;
+			}
+		}
+	}
+}
+
+.leagues {
+
+	&__container {
+		@extend %grid-container;
+
+		&--header {
+			@include span(4);
+
+			@include sbp() {
+				@include span(9);
+			}
+
+			@include sbp(su-l, 12) {
+				@include span(4);
+			} 
+		}
+
+		&--details {
+			@include span(4);
+
+			@include sbp() {
+				@include span(9);
+			}
+
+			@include sbp(su-l, 12) {
+				@include span(8 last);
+			}
+
+
+			div {
+				@include span(4);
+
+				@include sbp() {
+					@include span(4.5 inside);
+					&:nth-of-type(2n + 2) {
+						@include last;
+					}
+				}
+
+				@include sbp(su-l, 12) {
+					@include span(4 inside);
+					&:nth-of-type(3n + 3) {
+						@include last;
+					}
+				}
+			}
+		}
+	}
+}
+
+.leagues {
+	&__container {
+		&--header {
+			@extend %headlineSideStyle;
+
+			@include bp(bp-m-o) {
+				h2,
+				p {
+					text-align: center;
+				}
+			}
+		}
+
+		&--details {
+			display: flex;
+			flex-wrap: wrap;
+
+			div {
+				border: 1px solid $white;
+				color: $white;
+				padding-top: 0.5em;
+				padding-bottom: 0.5em;
+				padding-left: 0.5em;
+				padding-right: 0.5em;
+
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6 {
+					color: $white;
+					font-family: 'Lato', sans-serif;
+					font-weight: $font-weight--bold;
+				}
+
+				p {
+					font-weight: $font-weight--light;
+					font-size: em(18px);
+
+					@include bp(bp-m) {
+						font-size: em(20px);
+					}
+
+					@include bp(bp-l) {
+						font-size: em(18px);
+					}
+				}
+			}
+
+			.ladys { 
+				@extend %leagueStyle;
+				background-image: url(#{$path--rel}/course/league-womens.jpg);
+				background-position: 90% 50%;
+
+				div {
+					@extend %animationsLeague;
+					background-color: rgb(209, 50, 56);
+					width: 100%;
+				} 
+			}
+
+			.seniors {
+				@extend %leagueStyle; 
+				background-image: url(#{$path--rel}/course/league-seniors.jpg);
+				background-position: 10% 50%;
+
+				div {
+					@extend %animationsLeague;
+					background-color: $color-secondary;
+					width: 100%;
+				} 
+			}
+
+			.mens {
+				@extend %leagueStyle;
+				background-image: url(#{$path--rel}/course/league-mens.jpg);
+				background-position: 35% 50%;
+
+				div {
+					@extend %animationsLeague;
+					background-color: rgb(28, 29, 77);
+					width: 100%;
+				} 
+			}
+
+			.commercial {
+				@extend %leagueStyle;
+				background-image: url(#{$path--rel}/course/league-commercial.jpg);
+				color: $white;
+
+				div {
+					@extend %animationsLeague;
+					background-color: rgb(241, 231, 142);
+					width: 100%;
+
+					h4 {
+						color: $black;
+					}
+				} 
+			}
+
+			.imagedetails {
+				@extend %leagueStyle;
+				background-image: url(#{$path--rel}/course/league-static.jpg); 
+			}
+
+			.juniors {
+				@extend %leagueStyle;
+				background-image: url(#{$path--rel}/course/league-youth.jpg);
+				background-position: 70% 50%;
+
+				div {
+					@extend %animationsLeague;
+					background-color: rgb(155, 144, 138);
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+
+.lessons {
+
+	&__container {
+		@extend %grid-container;
+	}
+}
+
+.lessons {
+	@extend %bottomImages;
+	padding-top: 5em;
+	padding-bottom: 5em;
+	background-image: url(#{$path--rel}/course/lessonsm.jpg);
+
+	@include bp(bp-m) {
+		background-image: url(#{$path--rel}/course/lessonst.jpg);
+	}
+
+	@include bp(bp-l) {
+		background-image: url(#{$path--rel}/course/lessons.jpg);
+	}
+
+	&__container {
+		
+		&--content {
+
+			h2 {
+				color: $white;
+				text-transform: uppercase;
+			}
+
+			p {
+
+				@include bp(bp-m) {
+					width: 75%;
+					margin: 2em auto;
+				}
+			}
+
+			a {
+				@extend %clearButtons;
+				min-width: 200px;
+
+				@include bp(bp-m) {
+
+					&:first-of-type {
+						margin-right: 1em;
+					}
+
+					&:last-of-type {
+						margin-left: 1em;
+					}
+				}
+			}
+		}
+	}
+}
+
+.featuredhole {
+
+	&__container {
+		@extend %grid-container;
+
+		.clear__container {
+			@include full;
+		}
+
+		&--storyright,
+		&--storyleft,
+		&--imageright,
+		&--imageleft {
+			@include span(4);
+		}
+
+		@include sbp() {
+			&--storyright {
+				@include span(5);
+				margin-left: span(2 wide);
+				margin-right: span(2 wide);
+			}
+
+			&--storyleft {
+				@include span(5);
+				margin-left: span(2 wide);
+				margin-right: span(2 wide);
+			}
+
+			&--imageright {
+				@include span(5);
+				margin-left: span(2 wide);
+				margin-right: span(2 wide);
+			}
+
+			&--imageleft {
+				@include span(5);
+				margin-left: span(2 wide);
+				margin-right: span(2 wide);
+			}
+		}
+
+		@include sbp(su-l, 12) {
+			&--storyright {
+				@include span(8 last);
+			}
+
+			&--storyleft {
+				@include span(8);
+			}
+
+			&--imageright {
+				@include span(4 last);
+			}
+
+			&--imageleft {
+				@include span(4);
+			}
+		}
+	}
+}
+
+.featuredhole {
+
+	&__container {
+
+		&--storyright,
+		&--storyleft {
+			margin-top: 2em;
+			margin-bottom: 2em;
+
+			h2 {
+				font-size: em(36px);
+				text-transform: uppercase;
+				padding: 0 5px 15px;
+				margin-bottom: 0;
+				color: $color-primary;
+				border-bottom: 4px solid $color-accent;
+			}
+
+			h5 {
+				color: $color-shadow3;
+
+				span {
+					color: $black;
+				}
+			}
+
+			p {
+				padding-top: 15px;
+			}
+		}
+
+		&--imageright,
+		&--imageleft {
+			margin-top: 3em;
+			margin-bottom: 2em;
+
+			img {
+				border: 1px solid rgb(28, 29, 77);
+				border-radius: 5px;
+			}
+		}
+
+	}
+}
+
+.holeinone {
+
+	&__container {
+		@extend %grid-container;
+
+		&--header {
+			@include span(4);
+
+			@include sbp() {
+
+				@include span(3);
+			}
+
+			@include sbp(su-l, 12) {
+
+				@include span(4)
+			}
+		}
+
+		&--content {
+			@include span(4);
+
+			@include sbp() {
+				@include span(6 last);
+			}
+
+			@include sbp(su-l, 12) {
+				@include span(8 last);
+			}
+		}
+	}
+}
+
+.holeinone {
+
+	&__container {
+
+		&--header {
+			@extend %headlineSideStyle;
+		}
+
+		&--content {
+			a {
+				@include modernButton();
+			}
+		}
+	}
+}

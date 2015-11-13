@@ -1,0 +1,116 @@
+.mainfooter {
+	background-color: $color-primary;
+	border-top: 1px solid $color-primary;
+	text-align: center;
+	color: $white;
+	position: relative;
+	text-align: center;
+
+	a {
+		color: $white;
+	}
+
+	.backtop__container {
+		width: 100%;
+		text-align: center;
+
+		.backtop {
+			color: $white;
+			display: inline-block;
+			padding: 16px 0 16px 40px;
+			background-image: url(#{$path--rel}/arrows/arrow-smallup.png);
+			background-repeat: no-repeat;
+			background-position: left center;
+		}
+	}
+
+	&__container {
+
+		.address {
+			position: relative;
+			padding-bottom: 2em;
+
+			.homeLink {
+				display: inline-block;
+				margin: 0 auto;
+			}
+
+			img {
+				margin-top: 3em;
+			}
+
+			h5 {
+				color: $white;
+			}
+
+			p {
+				margin-bottom: 0;
+				margin-top: 0;
+			}
+		}
+
+		.social {
+			ul {
+				margin-top: 3em;
+				margin-bottom: 3em;
+
+				li {
+					display: inline-block;
+					margin-right: 1.5em;
+					margin-left: 1.5em;
+
+					&:first-of-type {
+						margin-left: 0;
+					}
+
+					&:last-of-type {
+						margin-right: 0;
+					}
+
+					@include bp(bp-s-o) {
+						display: block;
+						margin-top: 3em;
+						margin-bottom: 3em;
+						margin-left: auto;
+						margin-right: auto;
+					}
+
+					a {
+						@extend %squish-text;
+						padding: 16px;
+
+						&.email {
+							background: url(#{$path--rel}/icons/email.png) no-repeat center center;
+						}
+
+						&.facebook {
+							background: url(#{$path--rel}/icons/facebook.png) no-repeat center center;
+						}
+
+						&.twitter {
+							background: url(#{$path--rel}/icons/twitter.png) no-repeat center center;
+						}
+
+						&.instagram {
+							background: url(#{$path--rel}/icons/instagram.png) no-repeat center center;
+						}
+					}	
+				}
+			}
+		}
+	}
+
+	&__footercopy {
+		background-color: $grey;
+		color: $black;
+		padding: 1em;
+
+		p {
+			padding: 1em;
+			margin: 0;
+			font-size: em(16px);
+		}
+	}
+}
+
+

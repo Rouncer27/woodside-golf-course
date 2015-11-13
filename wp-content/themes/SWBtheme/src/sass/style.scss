@@ -1,0 +1,22 @@
+// Import Susy into our stylesheet. //
+@import '../../bower_components/susy/sass/susy';
+// Import Breakpoint into our stylesheets. //
+@import '../../bower_components/compass-breakpoint/stylesheets/breakpoint';
+// All the functionallity styles into our stylesheet. //
+@import 'utilities/index';
+// These are all the setup sass files for our theme
+@import 'base/index';
+// These are all the base sass files for our theme. This is where we normaizie the browser styles and set up our typography.
+@import 'wordpressbase/index';
+// These are the base WordPress templates sass styles.
+@import 'partials/index';
+
+
+/* Setting up global site styles */
+
+img {
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+	display: block;
+} 

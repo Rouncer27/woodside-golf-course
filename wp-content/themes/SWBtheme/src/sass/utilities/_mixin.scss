@@ -1,0 +1,72 @@
+
+// Susy Breakpoints and I use the $grid varable to set the amount of columns. //
+
+@mixin sbp($break:su-m, $grid:9) {
+
+	@if $break == su-s-o {
+		@include susy-breakpoint(1px $small - 1px, $grid) {
+			@content;
+		}
+	}
+
+	@if $break == su-m {
+		@include susy-breakpoint($small $medium - 1px, $grid) {
+			@content;
+		}
+	}
+
+	@if $break == su-l {
+		@include susy-breakpoint($medium, $grid) {
+			@content;
+		}
+	}
+
+	@if $break == su-xl {
+		@include susy-breakpoint($large, $grid) {
+			@content;
+		}
+	}
+}
+
+
+// Breakpoints for the theme. //
+
+@mixin bp($break) {
+
+	@if $break == bp-l {
+		@include breakpoint($medium) {
+			@content;
+		}
+	}
+
+	@if $break == bp-m-o {
+		@include breakpoint($small $medium - 1px) {
+			@content;
+		}
+	}
+
+	@if $break == bp-m {
+		@include breakpoint($small) {
+			@content;
+		}
+	}
+
+	@if $break == bp-s-o {
+		@include breakpoint(1px $small - 1px) {
+			@content;
+		}
+	}
+}
+
+// Absolute positioning mixin. //
+
+@mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+	position: absolute;
+}
+
+
+

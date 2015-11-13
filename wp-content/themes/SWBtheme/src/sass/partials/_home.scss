@@ -1,0 +1,410 @@
+.homepageimage {
+	background-image: url(#{$path--rel}/front-page/golfmobile1.jpg);
+	background-position: 50% 50%;
+	@extend %topHeaderImage;
+
+	@include bp(bp-m) {
+		background-image: url(#{$path--rel}/front-page/golf1t.jpg);
+	}
+
+	@include bp(bp-l) {
+		background-image: url(#{$path--rel}/front-page/golfbig.jpg);
+		background-attachment: fixed;
+	}
+}
+
+/*
+*
+*
+*
+* These are the styles for the slogan 
+* on the top of every page under the main image.
+*
+*
+*
+*/
+
+.slogan {
+	background-color: $color-secondary;
+	text-align: center;
+	color: $white;
+
+	p {
+		margin: 0;
+		font-weight: $font-weight--light;
+		font-size: em(24px);
+		line-height: 125%;
+
+		&:first-of-type {
+			padding-top: 1.25em;
+		}
+
+		&:last-of-type {
+			padding-bottom: 1.25em;
+		}
+	}
+}
+
+
+.homenews {
+	&__container {
+		@extend %grid-container;
+		display: flex;
+		flex-wrap: wrap;
+		text-align: center;
+		margin-top: 50px;
+	}
+
+	&__div {
+		@include span(4);
+
+		@include sbp(su-s-o, 4) {
+			margin-top: gutter(4);
+		}
+
+		@include sbp() {
+			@include span(4.5);
+		}
+
+		@include sbp(su-l, 12) {
+			@include span(4);
+		}
+	}
+
+	&__div.outrageous {
+		@include bp(bp-m-o) {
+			@include last;
+		}
+	}
+
+	&__div.frontnews {
+
+		@include sbp() {
+			@include span(6);
+			margin-right: span(1.5 wide);
+			margin-left: span(1.5 wide);
+			margin-top: gutter(9);
+			min-height: 300px;
+		}
+
+		@include bp(bp-l) {
+			@include last;
+		}
+	}
+}
+
+.homenews {
+	position: relative;
+	padding-bottom: 5em;
+
+	&__div {
+		border: 4px solid $baby-blue;
+
+		h4 {
+			margin: 0.5em 0.25em;
+		}
+
+		img {
+			margin: 1.5em auto;
+		}
+	}
+
+	.outrageous {
+		background-image: url(#{$path--rel}/front-page/outrageous.png);
+		color: $white;
+
+		h4 {
+			line-height: 110%;
+			color: $white;
+			text-transform: uppercase;
+			margin: 0.5em 1.5em 1.5em;
+			border-bottom: 3px solid $white;
+		}
+
+		p {
+			font-size: em(20px);
+			font-weight: $font-weight--light;
+		}
+
+		.youin {
+			margin: 2em 0 2em;
+		}
+	}
+
+	.bookit {
+		background-image: url(#{$path--rel}/front-page/bookit.png);
+
+		img {
+			margin: 0.75em auto;
+		}
+
+		a {
+			@include modernButton();
+		}
+
+		h4 {
+			color: $color-primary;
+			text-transform: uppercase;
+			margin: 0.3em 0.1em;
+			font-size: em(26px);
+
+			@include bp(bp-m) {
+				font-size: em(30px);
+			}
+
+			@include bp(bp-l) {
+				font-size: em(36px);
+			}
+		}
+	}
+
+	.frontnews {
+		background-image: url(#{$path--rel}/front-page/bookit.png);
+		p {
+			padding: em(7px);
+			font-size: em(14px); 
+		}
+	}
+
+	.scrolldown {
+		position: absolute;
+		top: -60px;
+		left: 0%;
+		right: 0%;
+		margin: 0 auto;
+		text-align: center;
+
+		a {
+			background: url(#{$path--rel}/arrows/arrow-smalldown.png) no-repeat center center;
+			display: inline;
+			padding: 11.25px 16px;
+		}
+	}
+}
+
+
+.insanelyoutrageous {
+	@extend %bottomImages;
+	padding-top: 100px;
+	padding-bottom: 50px;
+	position: relative;
+	background-image: url(#{$path--rel}/front-page/golfmobile2.jpg);
+
+	@include bp(bp-m) {
+		background-image: url(#{$path--rel}/front-page/golf2t.jpg); 
+	}
+
+	@include bp(bp-l) {
+		background-image: url(#{$path--rel}/front-page/golfbig2.jpg);
+		background-attachment: fixed;
+	}
+
+	.scrolldown2 {
+		position: absolute;
+		top: -60px;
+		left: 0%;
+		right: 0%;
+		margin: 0 auto 50px;
+		text-align: center;
+		top: 85px;
+		z-index: 5;
+
+		a {
+			background: url(#{$path--rel}/arrows/arrow-smalldown.png) no-repeat center center;
+			display: inline;
+			padding: 11.25px 16px;
+		}
+	}
+
+	&__intro {
+		@extend %grid-container;
+		background-color: rgba($white, 0.75);
+		text-align: center;
+		margin-bottom: 100px;
+
+		@include bp(bp-m) {
+			padding: 3em 10em;
+		}
+		
+		p {
+			color: $color-primary;
+			font-weight: $font-weight--bold;
+			line-height: 120%;
+			font-size: em(22px);
+			margin-bottom: 0;
+
+			@include bp(bp-m) {
+				font-size: em(26px);
+			}
+
+			@include bp(bp-l) {
+				font-size: em(30px);
+			}
+		}
+	}
+
+	&__instagram {
+		@extend %grid-container;
+
+		h2 {
+			font-size: em(24px);
+			background-image: url(#{$path--rel}/front-page/insanelyoutrageous.jpg);
+			background-position: top center;
+			text-align: center;
+			margin: 0;
+			padding: 0.4em 0.25em;
+			font-weight: $font-weight--bold;
+
+			@include bp(bp-m) {
+				font-size: em(34px);
+			}
+
+			@include bp(bp-l) {
+				font-size: em(40px);
+			}
+		}
+
+		&--image {
+			@include span(2);
+			border: 1px solid $white;
+			box-shadow: 4px 4px 4px $black;
+
+			@include bp(bp-s-o) {
+				margin-bottom: gutter(4);
+			}
+
+			&:nth-of-type(2n + 2) {
+				@include bp(bp-s-o) {
+					@include last;
+				}
+			}
+
+			@include sbp() {
+				@include span(3);
+				margin-bottom: gutter(9);
+
+				&:nth-of-type(3n + 3) {
+					@include last;
+				}
+			}
+
+			@include sbp(su-l, 12) {
+				@include span(3);
+				margin-bottom: gutter(12);
+
+				&:nth-of-type(4n + 4) {
+					@include last;
+				}
+
+				&:nth-of-type(9) {
+					display: none;
+				}
+			}
+
+		}
+	}
+}
+
+
+.homewidget {
+	@extend %clearfix;
+
+	&__container {
+		@extend %grid-container;
+	}
+
+	&__left,
+	&__center,
+	&__right {
+		@include span(4);
+
+		@include sbp() {
+			@include span(3);
+		}
+
+		@include sbp(su-l, 12) {
+			@include span(4);
+		}
+	}
+
+	&__right {
+		@include bp(bp-m) {
+			@include last;
+		}
+
+		@include bp(bp-l) {
+			@include last;
+		}
+	}
+}
+
+
+
+.homewidget {
+	background-color: $grey;
+	text-align: center;
+
+	h5 {
+		text-transform: uppercase;
+		font-size: em(18px);
+		color: $color-accent;
+		margin-bottom: 1em;
+
+		@include bp(bp-m) {
+			font-size: em(20px);
+		}
+
+		@include bp(bp-l) {
+			font-size: em(22px);
+		}
+	}
+
+	p,
+	a {
+		color: $white;
+		font-size: 18px;
+
+		@include bp(bp-m) {
+			font-size: em(20px);
+		}
+
+		@include bp(bp-l) {
+			font-size: em(22px);
+		}
+	}
+
+	a:hover {
+		color: $color-primary;
+	}
+
+	&__center a {
+		@include modernButton($color-accent, $color-accent);
+	}
+
+	&__right {
+		padding: 0 1em;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

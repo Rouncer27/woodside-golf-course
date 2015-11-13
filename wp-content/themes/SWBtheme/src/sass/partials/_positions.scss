@@ -1,0 +1,95 @@
+
+.positionheader {
+	background-color: $color-primary;
+
+	h1 {
+		text-align: center;
+		text-transform: uppercase;
+		color: $white;
+		margin-top: 0;
+		padding: 50px 0;
+		margin-bottom: 0;
+	}
+}
+
+.submissions {
+	background-color: $color-shadow;
+	padding: 25px 0;
+
+	p {
+		margin: 0;
+	}
+}
+
+.available {
+	&__container {
+		@extend %grid-container;
+
+		&--header {
+			@include span(4);
+
+			@include sbp() {
+				@include span(3);
+			}
+
+			@include sbp(su-l, 12) {
+				@include span(4);
+			}
+		}
+
+		&--positions {
+			@include span(4);
+
+			@include sbp() {
+				@include span(6 last);
+			}
+
+			@include sbp(su-l, 12) {
+				@include span(8 last);
+			}
+		}
+	}
+}
+
+.available {
+
+	&__container {
+
+		&--header {
+			@extend %headlineSideStyle;
+		}
+
+		&--positions {
+			h3 {
+				color: $color-accent;
+				margin-top: 0;
+				padding-top: 1em;
+			}
+
+			&--individual {
+				border-top: 5px solid $color-shadow3;
+
+				&:first-of-type {
+					border-top: 0;
+
+					h3 {
+						padding-top: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

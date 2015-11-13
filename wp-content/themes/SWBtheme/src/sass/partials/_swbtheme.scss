@@ -1,0 +1,328 @@
+
+/*
+*
+*
+*
+* These are the styles for ul lists to have bullets
+* 
+*
+*
+*/
+
+
+.swbcustompage, // These are for all the custom pages we made page-slug.php //
+.swbpages,	// These are just for the default pages on page.php //
+.swbposts { // These are for the single blog post page. single.php //
+
+	ul {
+		margin-bottom: 1.5em;
+
+		li {
+			list-style-type: disc;
+			list-style-position: inside;
+		}
+	}
+}
+
+
+
+/*
+*
+*
+*
+* This is all the styles for the sidebars with the class .swbsidebar.
+*
+*
+*
+*/
+
+
+.swbsidebar {
+
+	h3 {
+		text-transform: uppercase;
+		font-size: em(18px);
+
+		@include bp(bp-m) {
+			font-size: em(20px);
+		}
+	}
+
+	ul {
+		li {
+			a {
+				color: $color-secondary;
+				transition: all 0.5s;
+
+				&:hover {
+					color: $color-primary;
+				}
+			}
+		}
+	}
+}
+
+// This will be the default styles for the search form in the swbtheme. //
+
+.search-form {
+
+	input[type='search'],
+	input[type='submit'] {
+		border-radius: 10px;
+		transition: all 0.5s;
+		padding: 0.5em;
+		margin-bottom: 0.5em;
+	}
+
+	input[type='search'] {
+		border: 1px solid $color-secondary;
+		width: 97%;
+		@include bp(bp-m) {
+			width: 93%;
+		}
+		
+		&:focus {
+			background-color: lighten($color-primary, 35%);
+		}
+	}
+
+	input[type='submit'] {
+		background-color: $color-secondary;
+		color: $white;
+
+		@include bp(bp-s) {
+			width: 175px;
+			margin: 1em auto;
+		}
+
+		&:hover {
+			background-color: $color-primary;
+		}
+	}
+}
+
+
+/*
+*
+*
+*
+* These are the styles for all the comment sections of the swbtheme.
+* These styles will to attached to all comment sections with the class swbthemecomments.
+*
+*
+*/
+
+.swbthemecomments {
+	max-width: 715px;
+
+	h3 {
+		text-transform: uppercase;
+		font-size: em(18px);
+
+		@include bp(bp-m) {
+			text-align: left;
+		}
+	}
+
+	img.avatar {
+		margin: 1em 0em;
+	}
+
+	// ******** Reply Section ******** //
+
+	.commentlist {
+		margin: 15px 5px;
+
+		.comment-reply-link {
+			background-color: $color-primary;
+			color: $white;
+			border-radius: 10px;
+			padding: 0.4em 0.75em;
+			transition: all 0.5s;
+
+			&:hover {
+				background-color: $color-secondary;
+			}
+		}
+
+		.depth-2,
+		.depth-3 {
+			margin-top: 1em;
+			margin-left: 1em;
+			padding-left: 1em;
+		}
+
+		.depth-2 {
+			border-left: 3px solid $color-shadow;
+		}
+
+		.depth-3 {
+			border-left: 3px solid $color-shadow2;
+		}
+	}
+
+	// ****** Comment Section ****** //
+
+	.comment-respond {
+		margin-top: 2em;
+
+		h3 {
+			text-transform: uppercase;
+			font-size: em(20px);
+		}
+
+		form {
+
+			p {
+				max-width: 900%;
+				margin: 15px auto;		
+
+				@include bp(bp-m) {
+					max-width: 50%;
+					margin: 1em 0px;
+				}
+
+				label {
+					text-transform: uppercase;
+				}
+
+				input,
+				textarea {
+					background-color: lighten($color-accent, 25%);
+					border: 1px solid $black;
+					padding: 0.75em;
+					border-radius: 10px;
+
+					&:focus {
+						background-color: lighten($color-shadow, 30%);
+					}
+				}
+
+				input
+				 {
+					padding: 0.4em 0.75em;
+				}
+			}
+
+			p.comment-notes {
+				font-weight: bold;
+				max-width: 100%;
+			}
+
+			p.comment-form-url {
+				display: none;
+			}
+
+			p.form-submit {
+				display: inline-block;
+
+				.submit {
+					@include modernButton();
+				}
+			}
+		}
+	}
+}
+
+
+/*
+*
+*
+*
+* These are the styles for the single blog post pagination.
+* 
+*
+*
+*/
+
+
+.swbpagination {
+	max-width: 1000px;
+	width: 100%;
+	padding: 0.5em 2em;
+	margin: 1em auto;
+	text-align: center;
+
+	p {
+
+		@include bp(bp-m) {
+			display: inline-block;
+		}
+
+		a {
+			@include modernButton();
+		}
+	}
+
+	.next {
+
+		@include bp(bp-m) {
+			margin-right: 3em;
+		}
+	}
+
+	.previous {
+
+		@include bp(bp-m) {
+			margin-left: 3em;
+		}
+	}
+}
+
+
+
+/*
+*
+*
+*
+* These are the styles for the home.php and archive.php post pagination.
+* 
+*
+*
+*/
+
+
+.blog-archive__pagination {
+	@include full;
+	margin-top: 1.5em;
+	text-align: center;
+
+	.nav-links {
+
+		a {
+
+			&::after {
+				content: ' | ';
+				padding: 0em 0.5em;
+			}
+		}
+
+		a:first-of-type {
+
+			&::before {
+				content: ' | ';
+				padding: 0em 0.5em;
+			}
+		}
+
+		.current {
+			font-size: 20px;
+			padding: 0em 0.5em;
+			color: $color-secondary;
+
+			@include bp(bp-m) {
+				font-size: em(22px);
+			}
+
+			@include bp(bp-l) {
+				font-size: em(24px);
+			}
+		}
+	}
+}
+
+
+
+
+
+

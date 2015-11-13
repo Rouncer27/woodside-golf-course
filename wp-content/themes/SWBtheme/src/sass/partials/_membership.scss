@@ -1,0 +1,294 @@
+.membershipheader {
+
+	&__container {
+		@extend %grid-container;
+
+		&--text,
+		&--image {
+			@include span(4);
+		}
+
+		&--text {
+
+			@include sbp() {
+				@include span(4.5);
+			}
+
+			@include sbp(su-l, 12) {
+				@include span(6);
+			}
+		}
+
+		&--image {
+
+			@include sbp() {
+				@include span(4.5 last);
+			}
+
+			@include sbp(su-l, 12) {
+				@include span(6 last);
+			}
+		}
+	}
+}
+
+.membershipheader {
+	background-color: rgb(155,144,138);
+	color: #fff;
+
+	&__container {
+		padding-top: 0px;
+		padding-bottom: 0px;
+
+		&--text {
+
+			h1 {
+				text-transform: uppercase;
+				margin-bottom: 0px;
+				font-size: 40px;
+				font-size: 4rem;
+			}
+
+			p {
+				font-size: 20px;
+				font-size: 2rem;
+				font-weight: 300;
+				line-height: 130%;
+			}
+
+			img {
+				margin: 20px;
+			}
+		}
+
+		&--image {
+
+			@include bp(bp-m-o) {
+				margin-top: 2em;
+				margin-bottom: 2em;
+			}
+
+			img {
+				padding: 0px;
+				margin: 0px auto;
+			}
+		}
+	}
+}
+
+
+
+.membershipinfo {
+
+	&__container {
+		@extend %grid-container;
+
+		&--section {
+			@include full;
+
+			&--header {
+				@include span(4);
+
+				@include sbp() {
+
+					@include span(3);
+				}
+
+				@include sbp(su-l, 12) {
+
+					@include span(4);
+				}
+			}
+
+			&--content {
+				@include span(4);
+
+				@include sbp() {
+
+					@include span(6 last);
+				}
+
+				@include sbp(su-l, 12) {
+
+					@include span(8 last);
+				}
+			}
+		}
+	}
+}
+
+.membershipinfo {
+
+	&__container {
+
+		&--section {
+			margin-top: 25px;
+
+			&--header {
+				@extend %headlineSideStyle;
+
+			}
+
+			&--content {
+
+				.intro {
+
+					h3 {
+						color: rgb(28,29,77);
+						font-family: 'Lato', sans-serif;
+						font-weight: normal;
+						text-transform: uppercase;
+						font-size: 24px;
+						font-size: 2.4rem;
+						margin-bottom: 7px;
+						margin-top: 0;
+					}
+
+					.contactchris {
+						color: $black;
+
+						a {
+							color: $black;
+							transition: all 0.25s;
+
+							&:hover {
+ 								color: $color-shadow3;
+ 							}
+						}
+					}
+				}
+
+				.buttons {
+					text-align: left;
+
+					a {
+						text-align: center;
+						min-width: 300px;
+						max-width: 300px;
+						margin-left: auto;
+						margin-right: auto;
+
+						@include bp(bp-m) {
+							margin-left: 0;
+							margin-right: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+.buttons.unlimited a,
+.buttons.pre-paid a,
+.buttons.student a,
+.buttons.flex a { 
+	@include modernButton($color-secondary, $color-secondary);
+	display: block;
+	margin-bottom: 2em;
+
+	@include bp(bp-m) {
+		margin-bottom: 1em;
+	}
+}
+
+.membershipinfo .buttons a:first-of-type {
+	@include modernButton($color-primary, $color-primary);
+	display: block;
+	margin-top: 2em;
+	margin-bottom: 2em;
+
+	@include bp(bp-m) {
+		margin-top: 1em;
+		margin-bottom: 1em;
+	}
+
+	&:hover {
+		color: $white;
+	}
+}
+
+
+
+.interclub {
+	&__container {
+		@extend %grid-container;
+	}
+}
+
+.interclub {
+	@extend %bottomImages;
+	background-image: url(#{$path--rel}/membership/interclubm.jpg);
+
+	@include bp(bp-m) {
+		background-image: url(#{$path--rel}/membership/interclubt.jpg);
+	}
+
+	@include bp(bp-l) {
+		background-image: url(#{$path--rel}/membership/interclub.jpg);
+	}
+
+	&__container {
+		@include bp(bp-s-o) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		&--header {
+			background-color: rgba($color-primary, 0.6);
+			border-radius: 5px;
+			padding: 2em 1em;
+
+			@include bp(bp-m) {
+				padding: 3.5em 2em;
+			}
+
+			@include bp(bp-l) {
+				max-width: 75%;
+				margin: 5em auto;
+			}
+
+			h3 {
+				color: $white;
+				margin-bottom: 1em;
+				text-transform: uppercase;
+			}
+
+			p {
+				line-height: 1.75;
+				color: $white;
+				margin-bottom: 2em;
+				
+				a{
+					color: $color-shadow;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

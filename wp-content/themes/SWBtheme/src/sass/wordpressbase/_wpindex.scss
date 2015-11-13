@@ -1,0 +1,83 @@
+
+// **************  This is the susy layout for the index.php template file ***************** //
+
+.SWBindex__template {
+	@extend %grid-container;
+
+	@include breakpoint(1px $small - 1) {
+		&--article {
+			@include span(4);
+		}
+
+		&--sidebar {
+			@include span(4);
+		}
+	}
+
+	@include susy-breakpoint($small $medium - 1 , 9) {
+		&--article {
+			@include span(6);
+		}
+
+		&--sidebar {
+			@include span(3);
+			@include last;
+		}
+	}
+
+	@include susy-breakpoint($medium $large - 1 , 12) {
+		&--article {
+			@include span(8);
+		}
+
+		&--sidebar {
+			@include span(4);
+			@include last;
+		}
+	}
+
+	@include susy-breakpoint($large, 12) {
+		&--article {
+			@include span(8);
+		}
+
+		&--sidebar {
+			@include span(4);
+			@include last;
+		}
+	}
+}
+
+
+.SWBindex__template {
+	&--article {
+		.date,
+		.author {
+			padding: 0;
+			margin: 0;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			color: $color-primary;
+
+			a {
+				color: $color-primary;
+			}
+
+			@include breakpoint($small) {
+				text-align: center;
+			}
+		}
+		
+		.SWBindex__template__content--image {
+			margin: 25px;
+		}	
+	}
+}
+
+

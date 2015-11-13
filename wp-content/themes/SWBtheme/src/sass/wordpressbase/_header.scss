@@ -1,0 +1,170 @@
+.siteheader {
+
+	&__logo {
+
+		h1 {
+			text-align: center;
+			cursor: pointer;
+			@extend %squish-text;
+		}
+
+		&--link {
+			cursor: pointer;
+			@extend %squish-text;
+		}
+
+		p {
+			text-align: center;
+			padding-left: 1em;
+			padding-right: 1em;
+			padding-bottom: 1em;
+			margin: 0;
+		}
+	}
+
+	// Top nav bar styles //
+
+	&__nav {
+
+		.main {
+			position: relative;
+			text-align: center;
+			color: $black;
+			font-family: $font-family--primary;
+			background-color: darken($grey, 20%);
+
+			li {
+				display: inline-block;
+				text-align: center;
+				text-transform: uppercase;
+				margin: 0;
+				font-size: em(16px);
+
+				@include bp(bp-m) {
+					font-size: em(12px);
+				}
+
+				@include breakpoint( 799px ) {
+					font-size: em(14px);
+				}
+
+				@include bp(bp-l) {
+					font-size: em(16px);
+				}
+
+				&.current-menu-item {
+					background-color: $color-shadow3;
+
+					a {
+						color: $white;
+					}
+				}
+
+				&:hover {
+					background-color: $color-shadow3;
+
+					a {
+						color: $white;
+					}
+				}
+
+				a {
+					display: block;
+					color: $white;
+					padding: 25px 10px;
+					margin: 0;
+
+					&:hover {
+						color: $white;
+					}
+				}
+			}
+
+			// Sub-menu styles //
+			@include breakpoint(1px) {
+
+				.menu-item-has-children { 
+					position: relative;
+
+					.sub-menu {
+						visibility: hidden;
+						opacity: 0;
+						position: absolute;
+						top: 100%;
+						left: 0;
+						width: 125px;
+						text-align: left;
+						padding: 0;
+						margin: 0;
+						background-color: $color-primary;
+						border: 1px dotted $white;
+						z-index: 500;
+						transition: all 1s ease;
+						
+						li {
+							text-align: left;
+							padding: 5px;
+							display: block;
+							max-width: 150px;
+							font-size: 1rem;
+							margin-top: 1em;
+							margin-bottom: 1em;
+
+							a {
+								color: $color-secondary;
+								padding: 0;
+
+								&:hover {
+									color: $white;
+								}
+							}
+						}
+
+						li:first-of-type {
+							padding-top: 10px;
+						}
+
+						.current-menu-item {
+							background-color: $color-shadow;
+
+							a {
+								color: $black;
+							}
+						}
+					}
+				}
+
+				.menu-item-has-children > a { 
+					position: relative;
+					background-image: url(#{$path--rel}/images/arrowright.png);
+					background-position: 98% 50%;
+					background-repeat: no-repeat;
+					padding-right: 1em;
+					display: inline-block;
+
+					&:hover, 
+					&.hover {
+						background-image: url(#{$path--rel}/images/arrowdown.png);
+					}
+				}
+			}
+		}
+	}
+}
+
+
+#sdrn_menu_ul {
+	
+	.current-menu-item {
+		background-color: $color-shadow3;
+	}
+}
+
+.menu-item-has-children:hover .sub-menu,
+.sub-menu.hover {
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+
+
+

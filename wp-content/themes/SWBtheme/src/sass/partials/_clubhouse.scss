@@ -1,0 +1,195 @@
+.clubhouseheader {
+	@extend %topHeaderImage;
+	background-image: url(#{$path--rel}/clubhouse/header-clubhousem.jpg);
+
+	@include bp(bp-m) {
+		background-image: url(#{$path--rel}/clubhouse/header-clubhouset.jpg);
+	}
+
+	@include bp(bp-l) {
+		 background-image: url(#{$path--rel}/clubhouse/header-clubhouse.jpg);
+	}
+}
+
+
+
+.clubhouseheader {
+	padding-top: 7.5em;
+	padding-bottom: 7.5em;
+
+	img {
+		padding-bottom: 25px;
+	}
+
+	h1 {
+		color: $white;
+		font-weight: normal;
+		text-transform: uppercase;
+		margin-top: 0;
+		margin-bottom: 0;
+		line-height: 150%;
+	}
+
+	p {
+		font-family: 'Armata', sans-serif;
+		line-height: 125%;
+		font-size: em(22px);
+		margin-bottom: 0;
+		text-align: center;
+
+		@include bp(bp-m) {
+			font-size: em(26px);
+		}
+
+		@include bp(bp-l) {
+			font-size: em(30px);
+		}
+	}
+}
+
+
+.meetingrooms {
+
+	&__container {
+		@extend %grid-container;
+
+		&--header {
+			@include span(4);
+
+			@include sbp() {
+				@include span(3);
+			}
+
+			@include sbp(su-l, 12) {
+				@include span(4);
+			}
+		}
+
+		&--content {
+			@include span(4);
+
+			@include sbp() {
+				@include span(6 last);
+			}
+
+			@include sbp(su-l, 12) {
+				@include span(8 last);
+			}
+		}
+	}
+}
+
+
+.meetingrooms {
+	margin: 30px auto;
+
+	&__container {
+
+		&--header {
+			@extend %headlineSideStyle;
+		}
+
+		&--content {
+			a {
+				@include modernButton($color-shadow3, $color-shadow3);
+			}
+		}
+	}
+}
+
+
+.patio {
+	background-color: $color-shadow3;
+	color: $white;
+	text-align: center;
+	padding: 1em;
+
+	&__container {
+		@extend %grid-container;
+
+		&--content {
+			@include span(4);
+
+			h3 {
+				color: $white;
+			}
+		}
+
+		&--image {
+			@include span(4);
+
+			img {
+				display: inline-block;
+				margin-bottom: 25px;
+			}
+		}
+	}
+}
+
+
+.woodsrestaurant {
+
+	&__container {
+		@extend %grid-container;
+
+	}
+}
+
+
+.woodsrestaurant {
+	@extend %bottomImages;
+	padding-top: 2em;
+	padding-bottom: 2em;
+	background-image: url(#{$path--rel}/clubhouse/woodside-foodm.jpg);
+
+	@include bp(bp-m) {
+		background-image: url(#{$path--rel}/clubhouse/woodside-foodt.jpg);
+	}
+
+	@include bp(bp-l) {
+		background-image: url(#{$path--rel}/clubhouse/woodside-food.jpg);
+	}
+
+	&__container {
+
+		h3 {
+			color: $white;
+			margin-top: 25px;
+
+			span {
+				text-transform: uppercase;
+			}
+		}
+
+		p {
+			margin: 0 auto;
+			font-weight: $font-weight--normal;
+
+			@include bp(bp-m) {
+				width: 75%;
+			}
+		}
+
+		a {
+			@extend %clearButtons;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

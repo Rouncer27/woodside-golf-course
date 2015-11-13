@@ -1,0 +1,329 @@
+%imagebottom {
+	position: relative;
+
+	&--position {
+		position: absolute;
+		bottom: 0;
+		left: 0%;
+		right: 0%;
+	}
+}
+
+// Button styles. //
+
+%clearbtn {
+	border: 1px solid $color-shadow;
+	padding: 5px 15px;
+	display: inline-block;
+	color: $color-shadow;
+	border-radius: 5px;
+	transition: all 0.75s;
+
+	&:hover {
+		color: $color-secondary;
+		background-color: $color-shadow;
+	}
+}
+
+// main site buttons //
+
+%mainbuttons {
+	border-radius: 3px;
+	border: 2px solid $grey;
+	//box-shadow: 3px 3px 3px #98908a;
+	display: inline-block;
+	padding: 1em 2.5em;
+	background-color: rgba($white, 0.5);
+	color: $grey;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	font-size: em(16px);
+	transition: all 0.4s;
+
+	@include bp(bp-m) {
+		font-size: em(18px);
+	}
+
+	&:hover {
+		color: $black;
+		background-color: rgba($color-shadow, 0.45);
+	}
+
+	&:active {
+		box-shadow: 3px 3px 3px $grey inset;
+	}
+}
+
+
+// Get rid of the text so that screen readers still see it. used for social icons //
+
+%squish-text {
+	font: 0/0 serif;
+	text-shadow: none;
+	color: transparent;
+}
+
+// Quickly center any element. //
+
+%center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Woodside Golf Course Custom Extends
+
+/*
+*
+*
+* This is the extend for the top main image. These are the basic styles for displaying the image.
+*
+*
+*/
+
+%topHeaderImage {
+	min-height: 400px;
+	color: $white;
+	text-align: center;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+%bottomImages {
+	min-height: 400px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: $white;
+	text-align: center;
+}
+
+
+
+/****** Headers *******
+
+This is the styles for the 
+the headline styles used on 
+most pages. These are the 
+headlines that are purple 
+with the blue underline and 
+then the red text under the 
+blue underline.
+
+****************************/
+
+%headlineSideStyle {
+	h2,
+	p {
+		text-align: center;
+		font-weight: 300;
+	}
+
+	h2 {
+		color: $color-primary;
+		font-family: 'Lato', sans-serif;
+		text-transform: uppercase;
+		line-height: 100%;
+		padding-bottom: 0.3em;
+		margin-top: 0;
+		margin-bottom: 0.3em;
+		border-bottom: 4px solid $color-secondary;
+	}
+
+	p {
+		color: rgb(209,50,56);
+		font-size: em(20px);
+		line-height: 120%;
+		padding-bottom: 0px;
+
+		@include bp(bp-m) {
+			font-size: em(22px);
+		}
+
+		@include bp(bp-l) {
+			font-size: em(22px);
+		}
+	}
+
+	@include bp(bp-m) {
+		h2,
+		 p {
+			text-align: right;
+		}
+	}
+}
+
+
+
+
+
+
+
+/************* Leagues ********************/
+
+
+%leagueStyle {
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	padding: 0;
+	margin: 0;
+	flex-grow:1;
+	display: flex;
+}
+
+
+/*************** League Animations ***********/
+
+@keyframes flip { 0% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes flipback { 0% { opacity: 0; } 100% { opacity: 1; } }
+
+%animationsLeague {
+	@include breakpoint($medium) {
+		flex-grow: 1;
+		padding: 10px;
+	  	animation: flip 1s forwards;
+
+	  	&:hover {
+	  		animation: flipback 1s forwards;
+	  	}
+  	}
+}
+
+// This is the new button for the upgraded website. //
+
+@mixin modernButton($color: $grey, $background: $color-shadow) {
+	border-radius: 3px;
+	border: 2px solid $color;
+	//box-shadow: 3px 3px 3px #98908a;
+	display: inline-block;
+	padding: 1em 2.5em;
+	background-color: rgba($white, 0.5);
+	color: $color;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	font-size: em(16px);
+	transition: all 0.4s;
+
+	@include bp(bp-m) {
+		font-size: em(18px);
+	}
+
+	&:hover {
+		color: $black;
+		background-color: rgba($background, 0.45);
+	}
+
+	&:active {
+		box-shadow: 3px 3px 3px $grey inset;
+	}
+}
+
+
+/******* CLEAR BUTTON STYLES ************/
+
+%clearButtons {
+	color: $white;
+	border: 2px solid $white;
+	border-radius: 3px;
+	padding: 1em 2.5em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	text-transform: uppercase;
+	display: inline-block;
+	transition: all 1s;
+
+	&:hover {
+		color: $white;
+		background-color: rgba($black ,0.75);
+	}
+
+	&:active {
+		box-shadow: 3px 3px 3px $grey inset;
+	}
+}
+
+
+//    ***   The shop extend styles   ***   ///
+
+
+/*
+*
+*
+* The header images styles for the four category pages in the shop section
+* the categories are accessories, events, memberships, and lessons.
+*
+*
+*/
+
+
+
+@mixin shopcatheader($image) {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-left: 1em;
+	padding-right: 1em;
+	background-image: url(#{$path--rel}/images/#{$image}-header-mobile.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: 50% 50%;
+
+	@include bp(bp-m) {
+		background-image: url(#{$path--rel}/images/#{$image}-header-tablet.jpg);
+		background-size: 100%;
+		background-position: 70% 50%;
+	}
+
+	@include bp(bp-l) {
+		background-image: url(#{$path--rel}/images/#{$image}-header-desktop.jpg);
+		background-position: 60% 50%;
+		background-size: cover;
+		background-attachment: fixed;
+		padding-top: 150px;
+		padding-bottom: 150px;
+		border-top: 1px solid transparent;
+	}
+
+	h2 {
+		color: $white;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: em(30px);
+		background-image: url(#{$path--rel}/images/circletree.png);
+		background-position: top center;
+		background-repeat: no-repeat;
+		padding-top: 90px;
+
+		@include bp(bp-m) {
+			font-size: em(50px);
+		}
+
+		@include bp(bp-l) {
+			font-size: em(70px);
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

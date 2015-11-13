@@ -1,0 +1,51 @@
+.searchpage {
+	&__container {
+		@extend %grid-container;
+
+		footer {
+			@include span(4);
+			@include sbp() {
+				@include span(4);
+				margin-right: span(2.5 wide);
+				margin-left: span(2.5 wide);
+			}
+			
+			@include sbp(su-l, 12) {
+				@include span(4);
+				margin-right: span(4 wide);
+				margin-left: span(4 wide);
+			} 
+		}
+	}
+}
+
+.searchpage {
+	&__container {
+
+		header {
+			h2 {
+				text-transform: uppercase;
+				text-align: center;
+				font-size: em(22px);
+
+				@include bp(bp-m) {
+					font-size: em(26px);
+				}
+
+				@include bp(bp-l) {
+					font-size: em(30px);
+				}
+			}
+		}
+
+		footer {
+			p {
+				text-align: center;
+			}
+		}
+
+		&--noresults {
+			text-align: center;
+		}
+	}
+}

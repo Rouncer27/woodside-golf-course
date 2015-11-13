@@ -1,0 +1,90 @@
+
+.singlepostpage {
+
+	&__container {
+		@extend %grid-container;
+
+		&--article {
+			@include span(4);
+			@include susy-breakpoint($small $medium - 1, 9) {
+				@include span(7);
+				margin-right: span(1 wide);
+				margin-left: span(1 wide);
+			}
+
+			@include susy-breakpoint($medium, 12) {
+				@include span(9);
+				margin-right: span(1.5 wide);
+				margin-left: span(1.5 wide);
+			}
+		}
+	}
+}
+
+
+.singlepostpage {
+
+	&__container {
+
+		&--content {
+
+			.main,
+			.events,
+			.news,
+			.outrageous {
+
+				p {
+					color: $color-accent;
+					text-align: left;
+					margin-top: 3em;
+					margin-bottom: 0em;
+				}
+
+				a {
+					color: $color-accent;
+
+					&:hover {
+						color: $color-primary;
+					}
+				}
+
+				h2 {
+					color: $color-primary;
+					text-align: left;
+					border-top: 5px solid $color-accent;
+					padding-top: 0.5em;
+					margin-bottom: 1.5em;
+				}
+
+
+			}
+
+			.news {
+
+				p,
+				a {
+					color: $color-shadow3;
+				}
+
+				h2 {
+					border-top: 5px solid $color-shadow3;
+				}
+			}
+
+			.outrageous {
+
+				p,
+				a {
+					color: $color-secondary;
+				}
+
+				h2 {
+					border-top: 5px solid $color-secondary;
+				}
+			}
+		}
+	}
+}
+
+
+

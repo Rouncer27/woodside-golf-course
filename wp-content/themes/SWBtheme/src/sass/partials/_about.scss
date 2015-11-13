@@ -1,0 +1,213 @@
+
+.aboutheader {
+	@extend %topHeaderImage;
+	background-image: url(#{$path--rel}/about-page/ourstorym.jpg);
+
+	@include bp(bp-m) {
+		background-image: url(#{$path--rel}/about-page/ourstoryt.jpg);
+	}
+
+	@include bp(bp-l) {
+		background-image: url(#{$path--rel}/about-page/ourstory.jpg);
+		height: 450px;
+		margin: 0;
+		padding: 0;
+	}
+
+	img {
+		padding-top: 3.5em;
+		padding-bottom: 1.5em;
+	}
+
+	h1 {
+		margin-top: 0;
+		margin-bottom: 0;
+		line-height: 150%;
+		text-transform: uppercase;
+		color: $white;
+	}
+
+	h4 {
+		color: $white;
+		line-height: 60%;
+		font-weight: $font-weight--light;
+	}
+}
+
+.oursection {
+	@extend %clearfix;
+
+	&__container {
+		@extend %grid-container;
+	}
+
+	&__innercontainer {
+		@extend %grid-container;
+
+		&--header {
+			@include span(4);
+
+			@include sbp() {
+				@include span(3);
+			}
+
+			@include sbp(su-l, 12) {
+				@include span(4);
+			}
+		}
+
+		&--context {
+			@include span(4);
+
+			@include sbp() {
+				@include span(6 last);
+			}
+
+			@include sbp(su-l, 12) {
+				@include span(8 last);
+			}
+		}
+	}
+}
+
+.oursection {
+
+	&__innercontainer {
+		padding-left: 0;
+		padding-right: 0;
+
+		&--header {
+			@extend %headlineSideStyle;
+		}
+
+		&--context {
+			text-align: center;
+
+			@include bp(bp-m) {
+				text-align: left;
+			}
+
+			.buttons {
+				a {
+					@include modernButton();
+					text-align: center;
+					min-width: 315px;
+
+					@include bp(bp-m) {
+						min-width: 360px;
+					}
+				}
+			}
+		}
+
+		div#attachment_182 {
+			width: 100% !important;
+			margin: 0 auto;
+			border: none;
+		}
+
+		img.wp-image-182 {
+			margin: 0 auto;
+			border: none;
+		}
+
+		a.readmore {
+			@include modernButton();
+		}
+	}
+}
+
+.cause {
+	&__container {
+		@extend %grid-container;
+
+		&--othercause {
+
+			.causeimage {
+				@include span(4);
+
+				@include sbp() {
+					@include span(3);
+
+					&:last-of-type {
+						@include last;
+					}
+				}
+
+				@include sbp(su-l, 12) {
+					@include span(4);
+
+					&:last-of-type {
+						@include last;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+.cause {
+	@extend %bottomImages;
+	background-image: url(#{$path--rel}/about-page/causem.jpg);
+
+	@include bp(bp-m) {
+		background-image: url(#{$path--rel}/about-page/causet.jpg);
+	}
+
+	@include bp(bp-l) {
+		background-image: url(#{$path--rel}/about-page/cause.jpg);
+	}
+
+	&__container {
+
+		&--featuredcause {
+
+			img {
+				padding-top: 3em;
+				padding-bottom: 1.5em;
+			}
+
+			h3,
+			h5 {
+				color: $white;
+			}
+
+			a {
+				@extend %clearButtons;
+				min-width: 255px;
+
+				@include bp(bp-s-o) {
+					min-width: 250px;
+				}
+
+				@include bp(bp-m) {
+					&:first-of-type {
+						margin-right: 1em;
+					}
+				}
+
+				@include bp(bp-m) {
+					&:last-of-type {
+						margin-left: 1em;
+					}
+				}
+			}
+		}
+
+		&--othercause {
+			h4 {
+				color: $white;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+.container404 {
+	@extend %grid-container;
+}
+
+
+.container404 {
+	ul {
+		li {
+			list-style-type: disc;
+			list-style-position: inside;
+		}
+	}
+
+	.search-form {
+
+		@include bp(bp-m) {
+			width: 50%;
+
+			input[type='search'] {
+				width: 100%;
+			}
+
+			input[type='submit'] {
+				width: 175px;
+			}
+		}
+	}
+}

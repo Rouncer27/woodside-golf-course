@@ -1,0 +1,169 @@
+// Clearfix to help with floats.
+
+%clearfix {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+// This sets the styles for all the headlines of the site. It gets called in on the _bass.scss file while seting up all the headline styles.
+
+%headlinesBase {
+	color: $black;
+	font-family: $font-family--secondary;
+	font-weight: $font-weight--bold;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+// This is to set the container for all sizes. This is used with susy. 
+
+%grid-container {
+	padding: em(20px);
+	@include container();
+
+	@include breakpoint(1px $small - 1) {
+		@include container();
+	}
+
+	@include susy-breakpoint($small $medium - 1 , 9) {
+		@include container();
+	}
+
+	@include susy-breakpoint($medium $large - 1 , 12) {
+		@include container();
+	}
+
+	@include susy-breakpoint($large, 12) {
+		@include container();
+	}
+}
+
+
+// Screen reader text
+
+.srt {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+//**************************************************************************************************/
+/*
+/* This is the mixin for the Contact forms div. Remember you must use contact form 7 plugin and you 
+/* must go into the making of the form and give the class="formsubmit" to the submit button and the 
+/* class="smallprint" to the span tag if you want to have small print on the form.
+/*
+/***************************************************************************************************/
+
+%contactformstyles {
+
+	.wpcf7 {
+
+		p {
+			margin-bottom: 10px;
+			font-family: $font-family--third;
+
+			&:first-of-type {
+				margin-top: 50px;
+			}
+
+			input,
+			textarea {
+				padding: 5px;
+				background-color: lighten($color-shadow, 15%);
+				border: 2px solid lighten($black, 50%);
+				border-radius: 1px;
+				font-size: em(18px);
+				margin-top: 5px;
+
+				&:focus {
+					background-color: lighten($color-secondary, 30%);
+					color: $black;
+				}
+			}
+
+			input::-webkit-input-placeholder,
+			textarea::-webkit-input-placeholder {
+				color: $color-primary;
+				opacity: 0.5;
+			}
+
+			input:-moz-placeholder,
+			textarea:-moz-placeholder {
+				color: $color-primary;
+				opacity: 0.5;
+			}
+
+			input::-moz-placeholder,
+			textarea::-moz-placeholder {
+				color: $color-primary;
+				opacity: 0.5;
+			}
+
+			input:-ms-input-placeholder,
+			textarea:-ms-input-placeholder {
+				color: $color-primary;
+				opacity: 0.5;
+			}
+
+			span.smallprint {
+				font-size: 0.75em;
+				font-weight: $font-weight--light;
+			}
+		}
+
+		.formbutton {
+			width: 50%;
+			margin: 20px auto;
+
+			input {
+				@extend %mainbuttons;
+			}
+		}
+
+		@include breakpoint($small) {
+			.overall {
+				span {
+					margin: 0;
+				}
+
+				span label {
+					width: 20%;
+					display: inline-block;
+
+					input {
+						width: 25%;
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// Contact Forms Borders and styles for headlines //
+
+
+%contactborders {
+	background-color: lighten($grey, 60%);
+
+	@include breakpoint($small) {
+		//border: 4px solid $color-primary;
+		padding: 50px;
+	}
+
+	h2,
+	h3 {
+		text-align: left;
+		color: $color-accent;
+	}
+}

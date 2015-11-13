@@ -1,0 +1,323 @@
+.contactarea {
+	&__container {
+		background-color: $color-secondary;
+
+		&--left {
+			width: 100%;
+			float: left;
+			text-align: right;
+			background-color: $color-secondary;
+			display: inline-block;
+			color: $white;
+			padding: 2.5em;
+
+			@include bp(bp-m) {
+				width: 40%;
+			}
+
+			div {
+				width: 100%;
+				@extend %clearfix;
+
+				img {
+					float: right;
+				}
+			}
+
+			h2 {
+				text-transform: uppercase;
+				letter-spacing: 0.5px;
+				margin-top: 1em;
+				margin-bottom: 0;
+				color: $color-primary;
+
+				@include bp(bp-l) {
+					font-size: em(30px);
+				}
+			}
+
+			h3 {
+				color: $color-primary;
+				margin-top: 25px;
+				margin-bottom: 0;
+				text-transform: uppercase;
+				font-size: em(22px);
+
+				@include bp(bp-m) {
+					font-size: em(24px);
+				}
+
+				@include bp(bp-l) {
+					font-size: em(26px);
+				}
+			}
+
+			p {
+				padding: 0;
+				margin: 0;
+				font-weight: $font-weight--normal;
+				font-size: em(16px);
+			}
+
+			a {
+				color: $white;
+				transition: all 0.5s;
+
+				&:hover {
+					color: $color-shadow3;
+				}
+			}
+		}
+
+		&--right {
+			width: 100%;
+			display: inline-block;
+			background-color: $white;
+
+			@include bp(bp-m) {
+				width: 60%;
+			}
+
+			.contactform {
+				@extend %contactformstyles;
+				padding-left: 2em;
+				padding-right: 2em;
+				color: $black;
+
+				@include bp(bp-m) {
+					max-width: 600px;
+				}
+
+				p {
+					width: 45%;
+					margin: 0px 5px 0px 0px;
+					display: inline-block;
+					font-size: 14px;
+					font-size: 1.4rem;
+				}
+
+				.formmessage {
+					width: 91%;
+				}
+
+				p.formcheckbox span.first,
+				p.formcheckbox span.last {
+					display: inline-block;
+					width: 25%;
+					margin-bottom: 25px;
+				}
+				.formquiz {
+					display: block;
+				}
+
+				.formquiz input {
+					width: 75%;
+					display: block;
+
+					@include bp(bp-m) {
+						width: 50%;
+					}
+
+					@include bp(bp-l) {
+						width: 40%;
+					}
+				}
+
+				.wpcf7 .formbutton input {
+					@extend %modernButton;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+.ourteam {
+	&__container {
+
+		@extend %grid-container;
+
+		&--members {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row-reverse;
+
+			@include span(4);
+
+			@include sbp() {
+				@include span(7);
+				margin-left: span(1 wide);
+				margin-right: span(1 wide);
+			}
+
+			@include sbp(su-l, 12) {
+				@include span(10);
+				margin-left: span(1 wide);
+				margin-right: span(1 wide);
+			}
+
+			.teammember {
+				@include span(4);
+
+				@include sbp() {
+					@include span(4.5);
+					&:nth-of-type(2n + 2) {
+						@include last;
+					}
+				}
+
+				@include sbp(su-l, 12) {
+					@include span(3);
+					&:last-of-type {
+						@include last;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.ourteam {
+	background-color: $color-primary;
+	color: $white;
+	text-align: center;
+
+	&__container {
+
+		h2 {
+			color: $white;
+			text-transform: uppercase;
+			margin: 15px auto;
+		}
+
+		&--members {
+
+			.teammember {
+				color: $white;
+				margin: 2px;
+
+				h4 {
+					text-transform: capitalize;
+					font-family: 'Lato', sans-serif;
+					font-weight: $font-weight--normal;
+					font-size: 18px;
+					color: $white;
+					letter-spacing: 0.5px;
+					margin-top: 0.75em;
+					margin-bottom: 0.75em;
+					text-align: center;
+
+					@include bp(bp-m) {
+						text-align: left;
+					}
+				}
+
+				p {
+					font-size: em(14px);
+					margin: 0;
+					text-align: center;
+
+					@include bp(bp-m) {
+						text-align: left;
+					}
+				}
+
+				a {
+					color: $white;
+				}
+
+				div {
+					border-top: 4px solid rgb(209,50,56);
+					margin-top: 35px;
+					padding: 15px 0px;
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+
+
+
+a.teamfacebook{ background-image: url(#{$path--rel}/contact/facebook.png);}
+a.teamtwitter{ background-image: url(#{$path--rel}/contact/twitter.png);}
+a.teamlinkedin{ background-image: url(#{$path--rel}/contact/in.png);}
+
+a.teamfacebook,
+a.teamtwitter,
+a.teamlinkedin {
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center center;
+	padding: 16px 16px;
+	margin: 5px 10px;
+}
+
+
+
+.careers {
+
+	&__container {
+		@extend %grid-container;
+
+		&--header {
+			@include span(4);
+
+			@include sbp() {
+				@include span(3);
+			}
+
+			@include sbp(su-l, 12) {
+				@include span(4);
+			}
+		}
+		&--content {
+			@include span(4);
+
+			@include sbp() {
+				@include span(6 last);
+			}
+
+			@include sbp(su-l, 12) {
+				@include span(8 last);
+			}
+		}
+	}
+}
+
+.careers {
+
+	&__container {
+
+		&--header {
+			@extend %headlineSideStyle;
+		}
+
+		&--content {
+
+			h3,
+			h5 {
+				color: $color-primary;
+				text-transform: uppercase;
+			}
+
+			h5 {
+				margin-bottom: 0;	
+			}
+
+			a {
+				@include modernButton();
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
