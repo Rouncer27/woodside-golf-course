@@ -4,7 +4,7 @@
 add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 24;' ), 24 );
 
 // Remove the page title 
-add_filter('woocommerce_show_page_title',false);
+add_filter('woocommerce_show_page_title', function() { return false; } );
 
 // remove the results count. //
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
