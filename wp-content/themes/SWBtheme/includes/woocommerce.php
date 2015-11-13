@@ -3,7 +3,7 @@
 // How many products per page //
 add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 24;' ), 24 );
 
-// Remove the page title 
+// Remove the page title We need the function in order to work properly.
 add_filter('woocommerce_show_page_title', function() { return false; } );
 
 // remove the results count. //
