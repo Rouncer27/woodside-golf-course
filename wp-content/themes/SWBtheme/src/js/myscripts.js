@@ -4,21 +4,7 @@
          //	indicator: true,
          //	scrollable: true,
          //});//Flexy Menu
-
-         /* $('a[href*=#]:not([href=#])').click(function() {
-		    if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
-		      var target = $(this.hash);
-		      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-		      if (target.length) {
-		        $('html,body').animate({
-		          scrollTop: target.offset().top
-		        }, 1200);
-		        return false;
-		      }
-		    }
-		  });// End of the scroll down function*/
-
-
+ 
  		$('section.oursection div.reveal').hide(); 
  		$('section.oursection a.readmore').click(function() { 
  			$(this).prev().slideToggle('fast');
@@ -39,5 +25,12 @@
 
 
     	}); //End of the media boxes
+
+
+    $(function () {
+    	$.scrollUp({
+    		//activeOverlay: '#00FFFF'
+    	});
+	});
 
 });

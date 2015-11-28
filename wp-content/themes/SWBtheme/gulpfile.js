@@ -45,10 +45,22 @@ gulp.task('sass', function(){
 		}))
 });
 
+gulp.task('concatCss', ['sass'], function() {
+	gulp.src([
+		'./css/style.css'
+		])
+	.pipe(concat('style.css'))
+	.pipe(gulp.dest('./css'))
+	.pipe(browserSync.reload({
+			stream: true
+		}))
+});
+
 // Join all the javascript files together. //
 
 gulp.task('concatScripts', function(){
 	gulp.src([ // add all the javascript files here please, in the order you need them to concat. //
+		'bower_components/scrollup/dist/jquery.scrollUp.min.js',
 		'src/js/myscripts.js',
 		])
 	.pipe(concat('myscripts.js'))
@@ -69,7 +81,7 @@ gulp.task('minifyCss', function(){
 		//.pipe(unCss({
 		//	html: ['http://localhost/swbtheme/']
 		//}))
-		.pipe(minifyCss())
+		.pipe(minifyCss({processImport: false}))
 		// .pipe(rename('style.min.css')) I don't want to rename this file because I would then need to change the functions.php file
 		.pipe(gulp.dest('./css'))
 });
@@ -150,7 +162,7 @@ gulp.task('clean:dev', function(){
 
 
 gulp.task('watch',function(){ // run sass task before the watch task function starts.
-	gulp.watch('src/sass/**/*.scss', ['sass']);
+	gulp.watch('src/sass/**/*.scss', ['sass', 'concatCss']);
 	gulp.watch('src/js/**/*.js', ['lint:js']);
 	gulp.watch('src/js/**/*.js', ['concatScripts'])
 	gulp.watch('src/js/**/*.js', browserSync.reload);
@@ -163,6 +175,7 @@ gulp.task('default', function(callback){
 		'clean:dev',
 		['sprites', 'lint:js', /*'lint:sass'*/],
 		['sass', 'concatScripts'],
+		['concatCss'],
 		['browserSync', 'watch'],
 		callback
 	)

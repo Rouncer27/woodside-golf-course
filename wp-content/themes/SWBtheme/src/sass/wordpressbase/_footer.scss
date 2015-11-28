@@ -10,20 +10,6 @@
 		color: $white;
 	}
 
-	.backtop__container {
-		width: 100%;
-		text-align: center;
-
-		.backtop {
-			color: $white;
-			display: inline-block;
-			padding: 16px 0 16px 40px;
-			background-image: url(#{$path--rel}/arrows/arrow-smallup.png);
-			background-repeat: no-repeat;
-			background-position: left center;
-		}
-	}
-
 	&__container {
 
 		.address {

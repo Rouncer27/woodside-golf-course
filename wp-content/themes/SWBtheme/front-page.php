@@ -10,7 +10,6 @@
 		</div>
 
         <section class="homenews">
-        	<div class="scrolldown"><a title="Scroll Down The Page" href="#insansely"></a></div>
         	<div class="homenews__container latestnews">
         		<div class="homenews__div bookit">
         			<?php get_template_part( 'content/content', 'book' ); ?>
@@ -45,7 +44,6 @@
 
 
 		<section id="insansely" class="insanelyoutrageous">
-			<div class="scrolldown2"><a title="Scroll Down The Page" href="#test"></a></div>
 			<?php the_post(); ?>
 			<div class="insanelyoutrageous__intro ">	
 				<?php the_content(); ?>

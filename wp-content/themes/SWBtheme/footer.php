@@ -1,8 +1,4 @@
-		
 			<footer class="mainfooter">
-				<div class="backtop__container">
-					<a class="backtop" href="#top">Back To Top</a>
-				</div>
 				<div class="mainfooter__container">
 					<div class="address" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 						<div class="homeLink" ><a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/front-page/whitetree.png" alt="Woodside Golf Course's Logo"></a></div>

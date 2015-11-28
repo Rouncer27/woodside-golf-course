@@ -165,21 +165,6 @@
 			font-size: em(14px); 
 		}
 	}
-
-	.scrolldown {
-		position: absolute;
-		top: -60px;
-		left: 0%;
-		right: 0%;
-		margin: 0 auto;
-		text-align: center;
-
-		a {
-			background: url(#{$path--rel}/arrows/arrow-smalldown.png) no-repeat center center;
-			display: inline;
-			padding: 11.25px 16px;
-		}
-	}
 }
 
 
