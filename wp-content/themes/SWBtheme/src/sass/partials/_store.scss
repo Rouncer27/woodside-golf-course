@@ -375,6 +375,16 @@
 					}
 				}
 
+				.onsale {
+					background-color: $color-shadow;
+					color: $black;
+					border-radius: 0;
+					top: 10px;
+					left: 10px;
+					text-transform: uppercase;
+					padding: 0.5em 1em;
+				}
+
 				.price {
 					display: block;
 					width: 100%;
@@ -383,6 +393,20 @@
 					margin-bottom: 1em;
 					color: $color-primary;
 					transition: all 0.4s;
+
+					del {
+						.amount {
+							font-weight: $font-weight--light;
+						}
+					}
+
+					ins {
+						text-decoration: none;
+						.amount {
+							font-weight: $font-weight--bold;
+							margin-left: 10px;
+						}
+					}
 
 					&:hover {
 						color: $color-secondary;
@@ -503,6 +527,16 @@
 					.wp-post-image {
 						@include span(4);
 					}
+				}
+
+				.onsale { // the styles for the onsale highlight above the product image. //
+					background-color: $color-shadow;
+					color: $black;
+					border-radius: 0;
+					top: 10px;
+					left: 10px;
+					text-transform: uppercase;
+					padding: 0.5em 1em;
 				}
 
 				.entry-summary { // the div container that holds all the product information
