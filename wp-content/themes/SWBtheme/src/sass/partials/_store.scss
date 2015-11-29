@@ -509,25 +509,31 @@
 				margin-bottom: 2em;
 				border-bottom: 5px solid $color-primary;
 
-				.images { // The div container that holds all the images
+				.singlewoodside__container--images { // The div container that holds all the images
 					@include span(3);
-					margin-left: span(0.5 wide);
-					margin-right: span(0.5 wide);
+					@include bp(bp-s-o) {
+						margin-left: span(0.5 wide);
+						margin-right: span(0.5 wide);
+					}
 
 					@include sbp() {
 						@include span(4);
-						margin-left: 0;
 					}
 
 					@include sbp(su-l, 12) {
 						@include span(6);
-						margin-left: 0;
 					}
 
 					.wp-post-image {
 						@include span(4);
 					}
+
+					.images {
+						width: 100%;
+					}
 				}
+
+
 
 				.onsale { // the styles for the onsale highlight above the product image. //
 					background-color: $color-shadow;
@@ -539,7 +545,7 @@
 					padding: 0.5em 1em;
 				}
 
-				.entry-summary { // the div container that holds all the product information
+				.singlewoodside__container--summary { // the div container that holds all the product information
 
 					@include span(4);
 
@@ -565,6 +571,26 @@
 							font-size: em(32px);
 							text-align: left;
 						}
+					}
+
+					.features_headline {
+						font-size: em(18px);
+						text-transform: uppercase;
+
+						@include bp(bp-m) {
+							font-size: em(20px);
+						}
+
+						@include bp(bp-l) {
+							font-size: em(22px);
+						}
+					}
+
+					.product_feature {
+						font-size: em(16px);
+						margin-bottom: 0.5em;
+						list-style: disc inside none;
+						display: list-item; 
 					}
 
 					.cart {
@@ -609,6 +635,82 @@
 						}
 					}
 				}
+			}
+		}
+
+		.woocommerce-tabs.wc-tabs-wrapper {
+			width: 100%;
+			margin: 1em auto;
+
+			@include bp(bp-m) {
+				max-width: 75%
+			}
+
+			@include bp(bp-l) {
+				max-width: 70%;
+			}
+
+			#respond {
+
+				.form-submit {
+					display: block;
+					margin-left: auto;
+					margin-right: auto;
+					text-align: center;
+
+					@include bp(bp-m) {
+						display: inline-block;
+					}
+
+					#submit.submit {
+						float: none;
+						text-align: center;
+						text-transform: uppercase;
+						padding: 1em;
+						margin-bottom: 1em;
+						width: 300px;
+						background-color: rgba($color-primary, 0.5);
+						transition: all 0.35s;
+
+						&:hover {
+							background-color: rgba($color-primary, 0.75);
+							color: $white;
+						}
+					}
+				}
+			}
+
+			#commentform {
+				input {
+					border: 2px solid $color-primary;
+					border-radius: 5px;
+					background-color: darken($white, 10%);
+					padding: 0.25em;
+					transition: all 0.35s;
+
+					&:focus {
+						background-color: $white;
+					}
+				}
+			}
+
+			.comment-form-comment {
+
+				textarea {
+					border: 2px solid $color-primary;
+					border-radius: 5px;
+					background-color: darken($white, 10%);
+					padding: 0.25em;
+					transition: all 0.35s;
+
+					&:focus {
+						background-color: $white;
+					}
+				}
+			}
+
+			.tabs.wc-tabs {
+				display: none;
 			}
 		}
 	}

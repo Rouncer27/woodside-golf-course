@@ -21,8 +21,59 @@ function swb_more_info_button() {
 }
 add_action( 'woocommerce_after_shop_loop_item_title', 'swb_more_info_button', 20 );
 
+// move the price down the page to under the product description. //
+
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 25 );
+
+// Romove the long description from the backend of the website. //
+
+function remove_product_editor() {
+	remove_post_type_support( 'product', 'editor' );
+}
+add_action( 'init', 'remove_product_editor' );
+
+// remove the long description from the front end of the website. //
+
+add_filter( 'woocommerce_product_tabs', 'woo_remove_product_tabs', 98 );
+
+function woo_remove_product_tabs( $tabs ) {
+
+    unset( $tabs['description'] );      	// Remove the description tab
+    //unset( $tabs['reviews'] ); 			// Remove the reviews tab
+    unset( $tabs['additional_information'] );  	// Remove the additional information tab
+
+    return $tabs;
+}
+
+// add the features for the products. //
+
+function swb_add_features_for_products() {
+	if(have_rows('features_list') ) :
+		echo '<h2 class="features_headline">Product Features</h2>';
+		while( have_rows('features_list') ) : 
+			the_row();
+
+		$feature = esc_html( get_sub_field('feature') );
+		printf('<p class="product_feature">%s</p>', $feature);	
+
+		endwhile;
+	endif;
+}
+
+add_action( 'woocommerce_single_product_summary', 'swb_add_features_for_products', 21);
+
+// remove the related products from the single product display page. //
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+
+
+
+
+
+
+
+
+
 
 
 ?>
