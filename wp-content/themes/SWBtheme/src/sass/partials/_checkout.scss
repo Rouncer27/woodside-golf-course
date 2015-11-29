@@ -1,0 +1,80 @@
+.checkoutview {
+	&__container {
+		@extend %grid-container;
+
+		&--content {
+			@include span(4);
+		}
+	}
+}
+
+
+.checkoutview {
+	&__container {
+		&--content {
+			.woocommerce {
+				.checkout {
+					#customer_details {
+						.woocommerce-billing-fields,
+						.woocommerce-shipping-fields {
+							input,
+							textarea {
+								border: 1px solid $color-accent;
+								background-color: rgba($color-accent, 0.25);
+								padding: 0.5em;
+								transition: all 0.35s;
+
+								&:focus {
+									background-color: $white;
+									color: $black;
+								}
+							}
+						}
+					}
+
+					.woocommerce-checkout-review-order {
+
+						.woocommerce-checkout-review-order-table {
+
+							border: 1px solid $color-primary;
+
+							tr {
+								border-top: 1px solid $color-primary;
+
+							th,
+							td {
+								border-top: 1px solid $color-primary;
+							}
+						}
+					}
+
+						.woocommerce-checkout-payment {
+
+							.button.alt {
+								text-align: center;
+								text-transform: uppercase;
+								display: block;
+								padding: 1em;
+								margin-bottom: 2em;
+								width: 300px;
+								background-color: rgba($color-shadow3 , 0.5);
+
+								@include bp(bp-s-o) {
+									margin-right: auto;
+									margin-left: auto;
+								}
+
+								&:hover {
+									background-color: rgba($color-shadow3 , 1);
+									color: $white;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
