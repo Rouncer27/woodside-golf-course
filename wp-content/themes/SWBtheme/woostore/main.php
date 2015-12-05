@@ -1,6 +1,5 @@
 <main <?php post_class( 'store' ); ?>>
 
-
 	<section class="mainstoreheader">
 		<h2>Our Store</h2>
 		<p>Shop convieniently the things you need for a great golf season</p>
@@ -15,4 +14,5 @@
 			<?php woocommerce_content(); ?>
 		</div>
 	</section>
+
 </main> 

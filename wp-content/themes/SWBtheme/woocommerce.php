@@ -1,5 +1,8 @@
 <?php get_header() ?>
-		
+	
+	
+	<?php if ( is_user_logged_in() ) { ?>
+
 	<?php 
 
 	if( is_shop() ) {
@@ -20,5 +23,13 @@
 
 	?>
 
+	<?php } else { ?>
+
+	<div class="under_contruction">
+		<h2>Woodside Store</h2>
+		<p>Coming Soon</p>
+	</div>
+
+	<?php } ?>
 
 <?php get_footer(); ?>
