@@ -23,7 +23,7 @@
 
 						<div class="membershipinfo__container--section--header">
 							<h2>Unlimited Play</h2>
-							<p>Personal shareholder unlimited play and seasonal unlimited play</p>
+							<p>Personal shareholder unlimited play</p>
 						</div>
 						<div class="membershipinfo__container--section--content">
 							<div class="intro">
@@ -34,16 +34,7 @@
 								<a target="_blank" title="Click here to book now!" href="<?php the_field('personal_shareholder_dues_url'); ?>">Pay Dues</a>
 								<a target="_blank" href="<?php the_field( 'personal_shareholder_pdf' ); ?>">Personal Benefits Details</a>
 								<a target="_blank" href="<?php the_field( 'personal_shareholder_schedule_pdf' ); ?>">Dues Schedule</a>
-							</div>	
-							<!--<div class="intro">
-								<h3>seasonal unlimited play</h3>
-								<p><?php the_field( 'seasonal_unlimited' ); ?><p>	
-							</div>
-							<div class="buttons unlimited">
-								<a target="_blank" title="Click here to book now!" href="https://www.golfemsreg.com/events/2015_woodside_seasonal_unlimited_membership">Pay Dues</a>
-								<a target="_blank" href="<?php the_field( 'seasonal_benefits_pdf' ); ?>">Seasonal Benefits Details</a>
-								<a target="_blank" href="<?php the_field( 'seasonal_benefits_schedule_pdf' ); ?>">Dues Schedule</a>
-							</div>-->	
+							</div>		
 						</div>
 					</div>
 
