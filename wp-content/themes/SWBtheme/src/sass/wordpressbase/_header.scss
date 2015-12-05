@@ -4,13 +4,14 @@
 
 		h1 {
 			text-align: center;
-			cursor: pointer;
+			//cursor: pointer;
 			@extend %squish-text;
 		}
 
 		&--link {
 			cursor: pointer;
 			@extend %squish-text;
+			display: inline-block;
 		}
 
 		p {
