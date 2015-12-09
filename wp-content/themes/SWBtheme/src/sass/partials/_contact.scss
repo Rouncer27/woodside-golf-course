@@ -124,7 +124,9 @@
 				}
 
 				.wpcf7 .formbutton input {
-					@extend %modernButton;
+					background-color: $color-secondary;
+					color: $white;
+					padding: 0.5em 0.25em;
 				}
 			}
 		}

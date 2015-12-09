@@ -90,6 +90,7 @@
 			.buttons {
 				a {
 					@include modernButton();
+					text-transform: uppercase;
 					text-align: center;
 					min-width: 315px;
 

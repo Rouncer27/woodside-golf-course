@@ -92,6 +92,11 @@
 		&--content {
 			a {
 				@include modernButton($color-shadow3, $color-shadow3);
+				color: $white;
+
+				&:hover {
+					color: $white;
+				}
 			}
 		}
 	}

@@ -140,6 +140,14 @@
 
 		a {
 			@include modernButton();
+			padding: 0.5em 1.5em;
+			text-transform: uppercase;
+			border-color: $white;
+
+			&:hover {
+				color: $white;
+				background-color: $color-shadow3;
+			}
 		}
 
 		h4 {
@@ -364,6 +372,14 @@
 
 	&__center a {
 		@include modernButton($color-accent, $color-accent);
+		padding: 0.5em 1.5em;
+		color: $white;
+		border-color: $white;
+
+		&:hover {
+			color: $white;
+			background-color: $color-shadow3;
+		}
 	}
 
 	&__right {
