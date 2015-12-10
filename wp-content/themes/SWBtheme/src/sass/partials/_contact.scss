@@ -29,7 +29,7 @@
 				letter-spacing: 0.5px;
 				margin-top: 1em;
 				margin-bottom: 0;
-				color: $color-primary;
+				color: $white;
 
 				@include bp(bp-l) {
 					font-size: em(30px);
@@ -37,7 +37,7 @@
 			}
 
 			h3 {
-				color: $color-primary;
+				color: $white;
 				margin-top: 25px;
 				margin-bottom: 0;
 				text-transform: uppercase;
@@ -273,7 +273,8 @@ a.teamlinkedin {
 			}
 
 			@include sbp(su-l, 12) {
-				@include span(4);
+				@include span(3);
+				margin-right: span(0.5 wide);
 			}
 		}
 		&--content {
@@ -284,7 +285,7 @@ a.teamlinkedin {
 			}
 
 			@include sbp(su-l, 12) {
-				@include span(8 last);
+				@include span(8.5 last);
 			}
 		}
 	}
@@ -312,6 +313,12 @@ a.teamlinkedin {
 
 			a {
 				@include modernButton();
+
+				&:hover {
+					background-color: $color-primary;
+					color: $white;
+					border-color: $white;
+				}
 			}
 		}
 	}

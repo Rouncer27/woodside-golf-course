@@ -41,6 +41,7 @@
 			h1 {
 				text-transform: uppercase;
 				margin-bottom: 0;
+				color: $white;
 				font-size: em(40px);
 			}
 
@@ -115,6 +116,13 @@
 			a {
 				@include modernButton();
 				min-width: 230px;
+				text-transform: uppercase;
+
+				&:hover {
+					background-color: $color-primary;
+					color: $white;
+					border-color: $white;
+				}
 			}
 		}
 
@@ -150,6 +158,13 @@
 
 		a {
 			@include modernButton();
+			text-transform: uppercase;
+
+			&:hover {
+				background-color: $color-primary;
+				color: $white;
+				border-color: $white;
+			}
 		}
 
 		h4 {
@@ -606,7 +621,8 @@
 
 			@include sbp(su-l, 12) {
 
-				@include span(4)
+				@include span(3);
+				margin-right: span(0.5 wide);
 			}
 		}
 
@@ -618,7 +634,7 @@
 			}
 
 			@include sbp(su-l, 12) {
-				@include span(8 last);
+				@include span(8.5 last);
 			}
 		}
 	}
@@ -635,6 +651,13 @@
 		&--content {
 			a {
 				@include modernButton();
+				text-transform: uppercase;
+
+				&:hover {
+					background-color: $color-primary;
+					color: $white;
+					border-color: $white;
+				}
 			}
 		}
 	}

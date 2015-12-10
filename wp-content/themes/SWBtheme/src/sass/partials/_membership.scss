@@ -47,6 +47,7 @@
 				margin-bottom: 0px;
 				font-size: 40px;
 				font-size: 4rem;
+				color: $white;
 			}
 
 			p {
@@ -198,6 +199,12 @@
 		display: inline-block;
 		margin-bottom: 1em;
 	}
+
+	&:hover {
+		background-color: $color-primary;
+		color: $white;
+		border-color: $white;
+	}
 }
 
 .membershipinfo .buttons a:first-of-type {
@@ -216,7 +223,9 @@
 	}
 
 	&:hover {
-		color: $white;
+		background-color: $color-shadow;
+		color: $black;
+		border-color: $white;
 	}
 }
 

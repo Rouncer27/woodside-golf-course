@@ -52,7 +52,8 @@
 			}
 
 			@include sbp(su-l, 12) {
-				@include span(4);
+				@include span(3);
+				margin-right: span(0.5 wide);
 			}
 		}
 
@@ -64,7 +65,7 @@
 			}
 
 			@include sbp(su-l, 12) {
-				@include span(8 last);
+				@include span(8.5 last);
 			}
 		}
 	}
@@ -97,6 +98,12 @@
 					@include bp(bp-m) {
 						min-width: 360px;
 					}
+
+					&:hover {
+						background-color: $color-primary;
+						color: $white;
+						border-color: $white;
+					}
 				}
 			}
 		}
@@ -114,6 +121,12 @@
 
 		a.readmore {
 			@include modernButton();
+			
+			&:hover {
+				background-color: $color-primary;
+				color: $white;
+				border-color: $white;
+			}
 		}
 	}
 }

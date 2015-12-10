@@ -61,7 +61,8 @@
 			}
 
 			@include sbp(su-l, 12) {
-				@include span(4);
+				@include span(3);
+				margin-right: span(0.5 wide);
 			}
 		}
 
@@ -73,7 +74,7 @@
 			}
 
 			@include sbp(su-l, 12) {
-				@include span(8 last);
+				@include span(8.5 last);
 			}
 		}
 	}
@@ -95,7 +96,9 @@
 				color: $white;
 
 				&:hover {
-					color: $white;
+					color: $black;
+					border-color: $white;
+					background-color: $color-shadow;
 				}
 			}
 		}
