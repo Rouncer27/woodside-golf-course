@@ -24,7 +24,7 @@
 									<iframe id="TeeOnLogin" name="TeeOnLogin" src="https://tee-on.com/PubGolf/servlet/com.teeon.teesheet.servlets.all.BookATeeTimeLanding?CourseCode=WOOD&LoginType=1&RestrictToType=false" scrolling="auto" align="top" frameBorder="0" seamless="seamless" style="width:100%; height: 420px; overflow-y:auto; border:none; margin:5px;">
 									   <a href="http://www.tee-on.com">Tee-On Golf Systems Inc.</a>
 									</iframe>
-									<div style="padding:0; margin:0 0 0 10px; text-align:left; color: #888787;">Copyright &copy; <a href="http://tee-on.com" target="_blank"style="text-decoration:none; color:inherit;">Tee-On Golf Systems Inc.</a> All rights reserved</div>
+									<div style="padding:0; margin:0 0 0 10px; text-align:left; color: #888787;">Copyright &copy; <a href="http://tee-on.com" target="_blank" style="text-decoration:none; color:inherit;">Tee-On Golf Systems Inc.</a> All rights reserved</div>
 								</div>
 							</div>
 							<div class="bookingarea__container--information">
