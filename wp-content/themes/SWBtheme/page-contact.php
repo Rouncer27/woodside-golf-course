@@ -24,7 +24,7 @@
 								<p itemprop="telephone">403.686.GOLF (4653)</p>
 								<p>Restaurant 403.948.7416</p>
 								<p itemprop="telephone">Office 403.948.6717</p>
-								<p itemprop="email"><a taget="_blank" href="mailto:info@woodsidegc.com">E-mail info@woodsidegc.com</a></p>
+								<p itemprop="email"><a target="_blank" href="mailto:info@woodsidegc.com">E-mail info@woodsidegc.com</a></p>
 								<p>Fax 403.948.0106</p>
 							</div>						
 							<div class="contactarea__container--right">
