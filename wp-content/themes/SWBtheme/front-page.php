@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<main <?php post_class( 'home-main' ); ?> role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+	<main <?php post_class( 'home-main' ); ?>>
 
 		<header class="homepageimage">
 		</header>
