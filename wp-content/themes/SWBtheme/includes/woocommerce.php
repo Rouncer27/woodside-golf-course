@@ -15,7 +15,7 @@ remove_action( 'woocommerce_after_shop_loop_item_title', 'woocommerce_template_l
 
 // add the more info button to just after the price on the product display page. //
 function swb_more_info_button() {
-	printf('<p><a href="%s" title="%s" class="more_info_button" >Product Detail</a></p>',
+	printf('<p class="more_info_button" >Product Detail</p>',
 		esc_url( get_the_permalink() ),
 		esc_attr( get_the_title() ) );
 }
