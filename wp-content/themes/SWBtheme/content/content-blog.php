@@ -10,7 +10,7 @@
 			<div class="media-box-title"><h1 class="entry-title"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1></div>
 			<div class="media-box-date">
 				<p><span class="by">News Article Written by:</span><span> <?php the_author(); ?></span>.</p>
-				<p> Click to read more from <?php the_author_posts_link(); ?></span></p>
+				<p> Click to read more from <?php the_author_posts_link(); ?></p>
 				<p><?php the_date( 'M-d-y' ); ?></p>
 			</div>
 				
@@ -45,7 +45,7 @@
 				<div class="media-box-title"><h1 class="entry-title"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1></div>
 				<div class="media-box-date">
 					<p><span class="by">Events Article Written by:</span><span> <?php the_author(); ?></span>.</p>
-					<p> Click to read more from <?php the_author_posts_link(); ?></span></p>
+					<p> Click to read more from <?php the_author_posts_link(); ?></p>
 					<p><?php the_date( 'M-d-y' ); ?></p>
 				</div>
 					
@@ -84,7 +84,7 @@
 			<div class="media-box-title"><h1 class="entry-title"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1></div>
 			<div class="media-box-date">
 				<p><span class="by">Outrageous Article Written by:</span><span> <?php the_author(); ?></span>.</p>
-				<p> Click to read more from <?php the_author_posts_link(); ?></span></p>
+				<p> Click to read more from <?php the_author_posts_link(); ?></p>
 				<p><?php the_date( 'M-d-y' ); ?></p>
 			</div>
 				
@@ -106,7 +106,7 @@
 		<div class="media-box-title"><h1 class="entry-title"><a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1></div>
 		<div class="media-box-date">
 			<p><span class="by">News Article Written by:</span><span> <?php the_author(); ?></span>.</p>
-			<p> Click to read more from <?php the_author_posts_link(); ?></span></p>
+			<p> Click to read more from <?php the_author_posts_link(); ?></p>
 			<p><?php the_date( 'M-d-y' ); ?></p>
 		</div>
 			
