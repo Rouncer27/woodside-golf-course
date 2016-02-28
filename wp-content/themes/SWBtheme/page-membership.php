@@ -31,7 +31,7 @@
 								<p><?php the_field( 'personal_shareholder' ); ?><p>	
 							</div>
 							<div class="buttons unlimited">
-								<a target="_blank" title="Click here to book now!" href="<?php the_field('personal_shareholder_dues_url'); ?>">Pay Dues</a>
+								<a title="Click here to book now!" href="<?php the_field('personal_shareholder_dues_url'); ?>">Pay Dues</a>
 								<a target="_blank" href="<?php the_field( 'personal_shareholder_pdf' ); ?>">Personal Benefits Details</a>
 								<a target="_blank" href="<?php the_field( 'personal_shareholder_schedule_pdf' ); ?>">Dues Schedule</a>
 							</div>		
@@ -50,7 +50,7 @@
 								<p class="contactchris"><a href="mailto:chris@woodsidegc.com" title="Contact Chris McNicol">Contact Chris McNicol for full details</a></p>	
 							</div>
 							<div class="buttons pre-paid">
-								<a target="_blank" title="Click here to book now!" href="<?php the_field('corporate_shareholder_dues_url') ?>">Pay Dues</a>
+								<a title="Click here to book now!" href="<?php the_field('corporate_shareholder_dues_url') ?>">Pay Dues</a>
 								<a target="_blank" href="<?php the_field( 'pre-pay_play_pdf' ); ?>">Benefits Details</a>
 								<a target="_blank" href="<?php the_field( 'pre-pay_play_schedule_pdf' ); ?>">Dues Schedule</a>
 							</div>			
@@ -73,7 +73,7 @@
 								<p><?php the_field( 'intermediate_seasonal' ); ?><p>			
 							</div>
 							<div class="buttons student">
-								<a target="_blank" title="Click here to book now!" href="<?php the_field('student_dues_url'); ?>">Pay Dues</a>
+								<a title="Click here to book now!" href="<?php the_field('student_dues_url'); ?>">Pay Dues</a>
 								<a target="_blank" href="<?php the_field( 'student_benefit_details_pdf' ); ?>">Student Benefits Details</a>
 								<a target="_blank" href="<?php the_field( 'student_benefit_dues_schedule_pdf' ); ?>">Dues Schedule</a>	
 							</div>	
@@ -92,7 +92,7 @@
 								
 							</div>
 							<div class="flex buttons">	
-								<a target="_blank" title="Click here to book now!" href="<?php the_field('flex_membership_dues_url'); ?>">Pay Dues</a>
+								<a title="Click here to book now!" href="<?php the_field('flex_membership_dues_url'); ?>">Pay Dues</a>
 								<a target="_blank" href="<?php the_field( 'flex_benefit_details_pdf' ); ?>">Flex Benefits Details</a>
 							</div>	
 						</div>
