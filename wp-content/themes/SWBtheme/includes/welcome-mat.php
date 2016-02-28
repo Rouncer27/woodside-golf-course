@@ -16,7 +16,7 @@ function swbtheme_add_welcome_widget() { ?>
 	<p>On eash editing screen there are instructions to help you add and edit content.</p>
 	<p>It was an absolute pleasure to build your website. I want to thank you for choosing US! If you every have any questions, please do not hesitate to drop me a line.</p>
 	<p>Trevor Rounce - Owner / Web Developer - Switchback Creative Inc.</p>
-	<img src="<?php echo get_template_directory_uri(); ?>/img/logo/swbtheme.png" alt="Switchback Creative" title="Switchback Creative Loves it's clients." style="width:125px;" />
+	<img src="<?php echo get_template_directory_uri(); ?>/img/logo/swbtheme1.png" alt="Switchback Creative" title="Switchback Creative Loves it's clients." style="width:125px;" />
 <?php }
 
 
