@@ -1,12 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
  <html <?php language_attributes(); ?> class="no-js">
  <head>
-	<meta charset='<?php bloginfo( 'charset' ); ?>'>
-	<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>">
-	<meta name="HandheldFriendly" content="true"> 
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+
+	<?php // force Internet Explorer to use the latest rendering engine available ?>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel="icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/Woodsidefavicon.png" />
+
+	<?php // mobile meta (hooray!) ?>
+	<meta name="HandheldFriendly" content="true">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<?php // Favicons ?>
+	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/img/favicon.png" />
+	<link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/favicon.png" />
+
 	<link rel='pingback' href='<?php bloginfo( 'pingback_url' ); ?>' />
 	<!--[if lt IE 9]>
 	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5shiv.js"></script>
