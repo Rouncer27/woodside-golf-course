@@ -1,41 +1,30 @@
 <?php
 /**
- * The template for displaying product category thumbnails within loops.
+ * The template for displaying product category thumbnails within loops
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/content-product_cat.php.
  *
- * HOWEVER, on occasion WooCommerce will need to update template files and you (the theme developer).
- * will need to copy the new files to your theme to maintain compatibility. We try to do this.
- * as little as possible, but it does happen. When this occurs the version of the template file will.
- * be bumped and the readme will list any important changes.
+ * HOWEVER, on occasion WooCommerce will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
  *
- * @see     http://docs.woothemes.com/document/template-structure/
- * @author 		WooThemes
- * @package 	WooCommerce/Templates
- * @version     2.5.2
+ * @see     https://docs.woocommerce.com/document/template-structure/
+ * @author  WooThemes
+ * @package WooCommerce/Templates
+ * @version 2.6.1
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
-global $woocommerce_loop;
-
-// Store loop count we're currently on
-if ( empty( $woocommerce_loop['loop'] ) ) {
-	$woocommerce_loop['loop'] = 0;
-}
-
-// Store column count for displaying the grid
-if ( empty( $woocommerce_loop['columns'] ) ) {
-	$woocommerce_loop['columns'] = apply_filters( 'loop_shop_columns', 4 );
-}
-
-// Increase loop count
-$woocommerce_loop['loop'] ++;
 ?>
 
 <?php // CUSTOM CODE FOR WOODSIDE GOLF COURSE STORE ADDED MY SWITCHBACK. //
+
+global $woocommerce_loop;
+$woocommerce_loop['loop'] ++;
 
 	if(is_shop() ) { // check to see if we are on the shop page
 
@@ -43,16 +32,15 @@ $woocommerce_loop['loop'] ++;
 					// every fourth category add the class productslist__lessons for the custom css. //
 	if( 7 == $count ) { ?>
 
-		<li <?php wc_product_cat_class( 'productslist__item productslist__lessons' ); ?>>
+		<li <?php wc_product_cat_class( 'productslist__item productslist__lessons', $category ); ?>>
 
 <?php } else { ?>
 
-		<li <?php wc_product_cat_class( 'productslist__item' ); ?>>
+		<li <?php wc_product_cat_class( 'productslist__item', $category ); ?>>
 
 <?php } } else { ?>
 
-
-		<li <?php wc_product_cat_class( 'productslist__item' ); ?>>
+		<li <?php wc_product_cat_class( 'productslist__item', $category ); ?>>
 
 <?php } // END *** CUSTOM CODE FOR WOODSIDE GOLF COURSE STORE ADDED MY SWITCHBACK. *** END  // ?>
 
@@ -89,5 +77,4 @@ $woocommerce_loop['loop'] ++;
 	 * @hooked woocommerce_template_loop_category_link_close - 10
 	 */
 	do_action( 'woocommerce_after_subcategory', $category ); ?>
-
 </li>
