@@ -36,12 +36,12 @@ $woocommerce_loop['loop'] ++;
 ?>
 
 <?php // CUSTOM CODE FOR WOODSIDE GOLF COURSE STORE ADDED MY SWITCHBACK. //
-	
+
 	if(is_shop() ) { // check to see if we are on the shop page
 
 	$count = $woocommerce_loop["loop"];
 					// every fourth category add the class productslist__lessons for the custom css. //
-	if($count % 4 == 0) { ?>
+	if( 7 == $count ) { ?>
 
 		<li <?php wc_product_cat_class( 'productslist__item productslist__lessons' ); ?>>
 
@@ -91,4 +91,3 @@ $woocommerce_loop['loop'] ++;
 	do_action( 'woocommerce_after_subcategory', $category ); ?>
 
 </li>
-
