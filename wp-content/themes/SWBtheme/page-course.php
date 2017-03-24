@@ -61,7 +61,7 @@
 
 							</style>
 
-							<div class="bookit specials">
+							<div id="book" class="bookit specials">
 								<img src="<?php echo get_template_directory_uri();?>/img/icons/circlegolf.png" alt="A colourful graphic of a golf ball on a tee" >
 								<a target="_blank" title="Book A Tee time, Click here!" href="https://secure.west.prophetservices.com/WoodsideGolfV3">Book a Tee Time</a>
 								<h4>Book A Tee Time!</h4>
