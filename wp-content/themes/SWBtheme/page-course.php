@@ -19,13 +19,52 @@
 					</section>
 					<section class="bookingarea">
 						<div class="bookingarea__container">
-							<div class="bookingarea__container--teeon" id="book">
+							<!-- <div class="bookingarea__container--teeon" id="book" style="width:100%;">
 								<div style="border:none; margin:0 auto; padding:0; max-width:622px; min-width:300px; font-size:7.5pt; font-family:Arial, sans-serif; text-align:center;">
 									<iframe id="TeeOnLogin" name="TeeOnLogin" src="https://tee-on.com/PubGolf/servlet/com.teeon.teesheet.servlets.all.BookATeeTimeLanding?CourseCode=WOOD&LoginType=1&RestrictToType=false" scrolling="auto" align="top" frameBorder="0" seamless="seamless" style="width:100%; height: 420px; overflow-y:auto; border:none; margin:5px;">
 									   <a href="http://www.tee-on.com">Tee-On Golf Systems Inc.</a>
 									</iframe>
 									<div style="padding:0; margin:0 0 0 10px; text-align:left; color: #888787;">Copyright &copy; <a href="http://tee-on.com" target="_blank" style="text-decoration:none; color:inherit;">Tee-On Golf Systems Inc.</a> All rights reserved</div>
 								</div>
+							</div> -->
+							<style>
+
+								@media only screen and (min-width: 1px) {
+									.bookit.specials {
+										width: 100%;
+										max-width: 622px;
+										margin-left: auto;
+										margin-right: auto;
+										float: none;
+									}
+								}
+
+								@media only screen and (min-width: 786px) {
+									.bookit.specials {
+										width: 100%;
+										max-width: 622px;
+										margin-left: auto;
+										margin-right: auto;
+										float: none;
+									}
+								}
+
+								@media only screen and (min-width: 1024px) {
+									.bookit.specials {
+										width: 100%;
+										max-width: 622px;
+										margin-left: auto;
+										margin-right: auto;
+										float: right;
+									}
+								}
+
+							</style>
+
+							<div class="bookit specials">
+								<img src="<?php echo get_template_directory_uri();?>/img/icons/circlegolf.png" alt="A colourful graphic of a golf ball on a tee" >
+								<a target="_blank" title="Book A Tee time, Click here!" href="https://secure.west.prophetservices.com/WoodsideGolfV3">Book a Tee Time</a>
+								<h4>Book A Tee Time!</h4>
 							</div>
 							<div class="bookingarea__container--information">
 								<a target="_blank" title="Click here to see our rates." href="<?php the_field( 'rate_sheet_pdf' ); ?>">Our Rates</a>
@@ -34,11 +73,11 @@
 								<a target="_blank" title="Click here to see our Dress Code." href="<?php the_field( 'dress_code_pdf' ); ?>">Dress Code</a>
 							</div>
 						</div>
-						<div class="bookit specials">
+						<!-- <div class="bookit specials">
 							<img src="<?php echo get_template_directory_uri();?>/img/icons/circlegolf.png" alt="A colourful graphic of a golf ball on a tee" >
 							<a title="Book A Tee time, Click here!" href="<?php echo home_url(); ?>/specials/">See Our Specials</a>
-							<h4>Tee Off Specials!</h4>
-						</div>
+							<h4>Book A Tee Off!</h4>
+						</div> -->
 						<div class="bookingarea__downloadapp">
 							<h5>Download The Woodside Golf Course App</h5>
 							<a class="appa" target="_blank" title="Click to download our app from Apple" href="https://itunes.apple.com/app/id531879318"></a>
