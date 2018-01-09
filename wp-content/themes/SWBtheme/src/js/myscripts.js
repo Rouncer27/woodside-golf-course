@@ -26,11 +26,4 @@
 
     	}); //End of the media boxes
 
-
-    $(function () {
-    	$.scrollUp({
-    		//activeOverlay: '#00FFFF'
-    	});
-	});
-
 });

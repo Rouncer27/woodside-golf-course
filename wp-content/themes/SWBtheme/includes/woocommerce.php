@@ -98,12 +98,15 @@ function custom_override_checkout_fields( $fields ) {
 }
 
 add_filter( 'woocommerce_product_subcategories_hide_empty', 'swb_show_empty_categories', 10, 1 );
-function swb_show_empty_categories ( $show_empty ) {
-    $show_empty  =  true;
+function swb_show_empty_categories ( $hide_empty ) {
+    $hide_empty  =  false;
     // You can add other logic here too
-    return $show_empty;
+    return $hide_empty;
 }
 
+add_filter( 'woocommerce_subcategory_count_html', 'swb_hide_category_count' );
+function swb_hide_category_count() {
+}
 
 
 

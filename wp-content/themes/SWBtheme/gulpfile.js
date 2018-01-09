@@ -90,7 +90,7 @@ gulp.task('minifyCss', function(){
 
 gulp.task('browserSync', function() {
 	browserSync({
-		proxy: 'localhost/woodsideaddon/'
+		proxy: 'localhost/woodsidegc/'
 	})
 });
 

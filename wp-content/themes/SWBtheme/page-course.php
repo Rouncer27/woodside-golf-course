@@ -67,10 +67,13 @@
 								<h4>Book A Tee Time!</h4>
 							</div>
 							<div class="bookingarea__container--information">
-								<a target="_blank" title="Click here to see our rates." href="<?php the_field( 'rate_sheet_pdf' ); ?>">Our Rates</a>
 								<a target="_blank" title="Click here to see our score card." href="<?php the_field( 'score_card_pdf' ); ?>">Score Card</a>
-								<a target="_blank" title="Click here to see our code of conduct." href="<?php the_field( 'code_of_conduct_pdf' ); ?>">Code of Conduct</a>
 								<a target="_blank" title="Click here to see our Dress Code." href="<?php the_field( 'dress_code_pdf' ); ?>">Dress Code</a>
+								<a target="_blank" title="Click here to see our code of conduct." href="<?php the_field( 'code_of_conduct_pdf' ); ?>">Code of Conduct</a>
+								<a target="_blank" title="Click here to see our rates." href="https://secure.west.prophetservices.com/WoodsideBilling">Member Statements</a>
+								
+								
+								
 							</div>
 						</div>
 						<!-- <div class="bookit specials">

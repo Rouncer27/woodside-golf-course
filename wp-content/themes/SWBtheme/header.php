@@ -23,12 +23,16 @@
 	</head>
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/GolfCourse">
 		<header class="siteheader">
+			<div class="siteheader__wrapper">
+				<div class="siteheader__logo">	
+					<h1 itemprop="name"><?php bloginfo('name'); ?><a class="siteheader__logo--link" itemprop="url" href="<?php echo home_url(); ?>"><img itemprop="logo" src="<?php echo get_template_directory_uri(); ?>/img/logo/woodside.png" alt="Woodside Golf Course's Logo"/></a></h1>
+					<p itemprop="description"><?php bloginfo('description'); ?></p>
+				</div>
 
-			<div class="siteheader__logo">	
-				<h1 itemprop="name"><?php bloginfo('name'); ?><a class="siteheader__logo--link" itemprop="url" href="<?php echo home_url(); ?>"><img itemprop="logo" src="<?php echo get_template_directory_uri(); ?>/img/logo/woodside.png" alt="Woodside Golf Course's Logo"/></a></h1>
-				<p itemprop="description"><?php bloginfo('description'); ?></p>
+				<div class="siteheader__teetime">
+					<a target="_blank" href="https://secure.west.prophetservices.com/WoodsideGolfV3">Book A Tee Time</a>
+				</div>
 			</div>
-
 			<nav class="siteheader__nav">
 				<div class="nav_container">
 					<?php   /**
