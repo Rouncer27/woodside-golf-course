@@ -23,11 +23,11 @@
 
 						<div class="membershipinfo__container--section--header">
 							<h2>Unlimited Play</h2>
-							<p>Personal shareholder unlimited play</p>
+							<p>Personal Shareholder Unlimited Play</p>
 						</div>
 						<div class="membershipinfo__container--section--content">
 							<div class="intro">
-								<h3>Personal shareholder unlimited play</h3>
+								<h3>Personal Shareholder Unlimited Play</h3>
 								<p><?php the_field( 'personal_shareholder' ); ?><p>	
 							</div>
 							<div class="buttons unlimited">
