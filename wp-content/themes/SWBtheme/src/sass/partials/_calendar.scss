@@ -1,0 +1,80 @@
+.calendarhero {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+
+    @include bp(bp-m) {
+        height: 500px;
+    }
+
+    @include bp(bp-l) {
+        height: 65vh;
+        min-height: 550px;
+    }
+
+
+
+    &__content {
+        position: relative;
+        align-self: center;
+        width: 100%;
+        max-width: 750px;
+        margin: 0 auto;
+        padding: 25px;
+        z-index: 999;
+        color: $white;
+        text-align: center;
+
+        h2 {
+            color: $white;
+            font-weight: normal;
+            text-transform: uppercase;
+            margin-top: 0;
+            margin-bottom: 0;
+            line-height: 150%;
+        }
+    
+        p {
+            font-family: 'Armata', sans-serif;
+            line-height: 125%;
+            font-size: em(22px);
+            margin-bottom: 0;
+            text-align: center;
+    
+            @include bp(bp-m) {
+                font-size: em(26px);
+            }
+    
+            @include bp(bp-l) {
+                font-size: em(30px);
+            }
+        }
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($black, 0.5);
+        z-index: 2;
+    }
+
+
+    &__background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('#{$path--rel}/calendar/calendar-woodside-gc-min.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 1;
+    }
+}

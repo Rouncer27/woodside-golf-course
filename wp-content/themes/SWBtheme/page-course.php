@@ -96,9 +96,46 @@
 						</div>
 
 					</section>
+
+					<section id="course-tourny" class="tournaments">
+						<div class="tournaments__container">
+						<?php 
+							$args = array(
+								'post_type' => 'tournaments',
+								);
+
+							$tournaments = new WP_Query($args);
+
+							while( $tournaments->have_posts() ) : $tournaments->the_post();
+						?>
+
+						<h2><?php the_field( 'headline' ); ?></h2>
+						<p><?php the_field( 'description' ); ?></p>
+						<a target="_blank" title="" href="<?php the_field( 'tournament_pdf' ); ?>">Tournaments</a>
+						<a target="_blank" title="" href="<?php the_field( 'advanced_groups_pdf' ); ?>">Advanced Groups</a>
+
+					<?php endwhile; wp_reset_postdata(); ?>
+						</div>
+					</section>
+
+
+
+
 					<section id="menuleagues" class="leagues">
 						<div class="leagues__container">
-							<div class="leagues__container--header">
+							<div class="leagues__header">
+								<h2>Our Leagues</h2>
+								<p>Creating insanely outrageous stories through league play</p>
+							</div>
+
+							<div class="leagues__content">
+								<p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
+								<a title="Click here for more information on our leagues." href="<?php echo esc_url( home_url( '/leagues/' ) ); ?>" >More Info</a>
+							</div>
+							
+
+
+							<!-- <div class="leagues__container--header">
 								<h2>Our Leagues</h2>
 								<p>Creating insanely outrageous stories through league play</p>
 							</div>
@@ -123,9 +160,17 @@
 								<div class="juniors">
 									<div><?php the_field( 'juniors' ); ?></div>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</section>
+
+					
+
+
+
+
+					
+		
 					<section id="menulessons" class="lessons">
 						<div class="lessons__container">
 							<div class="lessons__container--content">
@@ -136,6 +181,16 @@
 							</div>
 						</div>
 					</section>
+								
+
+
+
+
+
+
+
+
+
 					<section id="menufeaturedhole" class="featuredhole">
 						<?php get_template_part( 'content/content', 'featured'); ?>
 					</section>

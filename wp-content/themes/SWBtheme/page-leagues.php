@@ -1,6 +1,14 @@
 <?php get_header(); ?>
 	<main <?php post_class( 'membership row' ); ?> role="main">
-		<?php the_post(); ?>
+        <?php the_post(); ?>
+        <div class="leaguehero">
+            <div class="leaguehero__content">
+                <h2>Our Leagues</h2>
+				<p>Creating insanely outrageous stories through league play</p>
+            </div>
+            <div class="leaguehero__overlay"></div>
+            <div class="leaguehero__background"></div>
+        </div>
         <div class="slogan">
 			<?php get_template_part( 'content/content', 'quote' ); ?>
 		</div>
