@@ -4,6 +4,7 @@
 
         <div class="calendarhero">
             <div class="calendarhero__content">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/calendar/icon-calendar-woodside.png" alt="Woodside icon with crazy colourful background">
                 <h2>Events Calendar</h2>
 				<p>Creating insanely outrageous stories with awesome events</p>
             </div>

@@ -128,6 +128,9 @@
 			&--header {
 				@extend %headlineSideStyle;
 
+				h2 span {
+					font-size: 0.75em;
+				}
 			}
 
 			&--content {

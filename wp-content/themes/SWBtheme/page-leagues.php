@@ -3,6 +3,7 @@
         <?php the_post(); ?>
         <div class="leaguehero">
             <div class="leaguehero__content">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/leagues/icon-leagues-woodside.png" alt="Woodside calendar icon with crazy colourful background">
                 <h2>Our Leagues</h2>
 				<p>Creating insanely outrageous stories through league play</p>
             </div>
