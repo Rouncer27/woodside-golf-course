@@ -124,12 +124,12 @@
 					<section id="menuleagues" class="leagues">
 						<div class="leagues__container">
 							<div class="leagues__header">
-								<h2>Our Leagues</h2>
-								<p>Creating insanely outrageous stories through league play</p>
+								<h2>Leagues</h2>
+								<p>Instigating the creation of Insanely Outrageous Stories</p>
 							</div>
 
 							<div class="leagues__content">
-								<p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.</p>
+								<p>Woodside has created a variety of popular league formats that provide full value when it comes to entertainment.  No matter what your level of play, there is a league option that is sure to be a fit for you.  We have developed both competitive and non-competitive options, along with men’s, ladies and mixed events - all with the primary goal of creating extraordinary moments through the game of golf.  2018 League Information will become available in March.  Many of these leagues sell-out in a matter of hours, so be sure to note the registration dates and times if you want to be apart of these great programs in 2018.</p>
 								<a title="Click here for more information on our leagues." href="<?php echo esc_url( home_url( '/leagues/' ) ); ?>" >More Info</a>
 							</div>
 							

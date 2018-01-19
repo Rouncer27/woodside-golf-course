@@ -39,12 +39,12 @@
 							
 							<div class="intro">
 								<h3>Seasonal Designate Unlimited Play</h3>
-								<p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, faucibus adipiscing, commodo quis, gravida id, est. Sed lectus. Praesent elementum hendrerit tortor. Sed semper lorem at felis. Vestibulum volutpat, lacus a ultrices sagittis, mi neque euismod dui, eu pulvinar nunc sapien ornare nisl. Phasellus pede arcu, dapibus eu, fermentum et, dapibus sed, urna.<p>	
+								<p>There are a limited number of Seasonal Memberships available at Woodside Golf Course.  A Designate Membership provides you an opportunity to take over the Annual Dues commitment of a current Woodside Personal Shareholder for a single season.  Designates are provided all of the benefits associated with Personal Shareholder Membership at Woodside Golf Course.  If you are interested in experiencing an Unlimited Play Membership at Woodside this season, then contact us at 403.686.GOLF (4653) to instigate the creation of your Woodside story!<p>	
 							</div>
 							<div class="buttons unlimited">
-								<a href="#">Pay Dues</a>
-								<a href="#">Personal Benefits Details</a>
-								<a href="#">Dues Schedule</a>
+								<a target="_blank" href="https://woodsidegc.com/store/designateunlimiteddues/">Pay Dues</a>
+								<a target="_blank" href="https://woodsidegc.com/wp-content/uploads/2017/11/ShareUnlimitedMembershipInfo-2018.pdf">Personal Benefits Details</a>
+								<a target="_blank" href="https://woodsidegc.com/wp-content/uploads/2017/11/ShareUnlimitedDuesSchedule-2018.pdf">Dues Schedule</a>
 							</div>	
 
 
