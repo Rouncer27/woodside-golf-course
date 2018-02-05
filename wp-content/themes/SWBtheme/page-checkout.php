@@ -4,7 +4,6 @@
 			<section class="checkoutview">
 				<div class="checkoutview__container">
 					<div class="checkoutview__container--content">
-						<h3 style="padding:50px 10px; text-align:center;">The Store is currently closed for maintenance. Please check back soon...</h3>
 						<?php the_content(); ?>
 					</div>
 				</div>

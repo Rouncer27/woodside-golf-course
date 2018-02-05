@@ -1,5 +1,4 @@
 <?php get_header() ?>
-	<h3 style="padding:50px 10px; text-align:center;">The Store is currently closed for maintenance. Please check back soon...</h3>
 	<?php 
 
 		if( is_shop() ) {
