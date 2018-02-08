@@ -47,6 +47,8 @@ gulp.task('sass', function(){
 
 gulp.task('concatCss', ['sass'], function() {
 	gulp.src([
+		'./cssplugin/mediabox/magnific-popup.css',
+		'./cssplugin/mediabox/mediaBoxes.css',
 		'./css/style.css'
 		])
 	.pipe(concat('style.css'))
@@ -60,6 +62,19 @@ gulp.task('concatCss', ['sass'], function() {
 
 gulp.task('concatScripts', function(){
 	gulp.src([ // add all the javascript files here please, in the order you need them to concat. //
+		'./jsplugin/mediabox/jquery.mediaBoxes.js',
+		'./jsplugin/mediabox/jquery.magnific-popup.min.js',
+		'./jsplugin/mediabox/waypoints.min.js',
+
+		'./jsplugin/mediabox/jquery.transit.min.js',
+		'./jsplugin/mediabox/jquery.easing.js',
+
+		'./jsplugin/mediabox/jquery.imagesLoaded.min.js',
+		'./jsplugin/mediabox/modernizr.custom.min.js',
+		'./jsplugin/mediabox/jquery.isotope.min.js',
+
+
+		
 		'bower_components/scrollup/dist/jquery.scrollUp.min.js',
 		'src/js/myscripts.js',
 		])

@@ -25,23 +25,12 @@ add_image_size( 'outrageousfront', 250, 250, true );
 
 //   ***   These are where we include style sheets that may be need for our project.   ***   //
 function switchback_styles() {
-	//wp_enqueue_style( 'fonts', 'http://fonts.googleapis.com/css?family=Lato:300,400,700|Armata' );	
-	wp_enqueue_style( 'mediabox1', get_template_directory_uri() . '/cssplugin/mediabox/magnific-popup.css' );
-	wp_enqueue_style( 'mediabox2', get_template_directory_uri() . '/cssplugin/mediabox/mediaBoxes.css' );
 	wp_enqueue_style( 'main', get_template_directory_uri() . '/css/style.css' );
 }
 add_action( 'wp_enqueue_scripts', 'switchback_styles' );
 
 //   ***   This is where we will include more script files that may be need for our project.   ***   //
 function switchback_scripts() {
-	wp_enqueue_script( 'mediabox1', get_template_directory_uri() . '/jsplugin/mediabox/jquery.isotope.min.js', array( 'jquery' ), false, false);
-	wp_enqueue_script( 'mediabox2', get_template_directory_uri() . '/jsplugin/mediabox/jquery.imagesLoaded.min.js', array( 'jquery' ), false, false);
-	wp_enqueue_script( 'mediabox3', get_template_directory_uri() . '/jsplugin/mediabox/jquery.transit.min.js', array( 'jquery' ), false, false);
-	wp_enqueue_script( 'mediabox4', get_template_directory_uri() . '/jsplugin/mediabox/jquery.easing.js', array( 'jquery' ), false, false);
-	wp_enqueue_script( 'mediabox5', get_template_directory_uri() . '/jsplugin/mediabox/waypoints.min.js', array( 'jquery' ), false, false);
-	wp_enqueue_script( 'mediabox6', get_template_directory_uri() . '/jsplugin/mediabox/modernizr.custom.min.js', array( 'jquery' ), false, false);
-	wp_enqueue_script( 'mediabox7', get_template_directory_uri() . '/jsplugin/mediabox/jquery.magnific-popup.min.js', array( 'jquery' ), false, false);
-	wp_enqueue_script( 'mediabox8', get_template_directory_uri() . '/jsplugin/mediabox/jquery.mediaBoxes.js', array( 'jquery' ), false, false);
 	wp_enqueue_script( 'themejs', get_template_directory_uri() . '/js/myscripts.js', array( 'jquery' ), false, false);
 }
 add_action( 'wp_enqueue_scripts', 'switchback_scripts' );
