@@ -65,16 +65,11 @@ gulp.task('concatScripts', function(){
 		'./jsplugin/mediabox/jquery.mediaBoxes.js',
 		'./jsplugin/mediabox/jquery.magnific-popup.min.js',
 		'./jsplugin/mediabox/waypoints.min.js',
-
 		'./jsplugin/mediabox/jquery.transit.min.js',
 		'./jsplugin/mediabox/jquery.easing.js',
-
 		'./jsplugin/mediabox/jquery.imagesLoaded.min.js',
 		'./jsplugin/mediabox/modernizr.custom.min.js',
 		'./jsplugin/mediabox/jquery.isotope.min.js',
-
-
-		
 		'bower_components/scrollup/dist/jquery.scrollUp.min.js',
 		'src/js/myscripts.js',
 		])
