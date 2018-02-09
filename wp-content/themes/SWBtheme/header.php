@@ -17,8 +17,6 @@
 	<!--[if lt IE 9]>
 	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5shiv.js"></script>
 	<![endif]-->
-	<!--<script type="text/javascript">function getCourseCode(){return 'WOOD';}</script>
-	<script type="text/javascript" src="//tee-on.com/mobileRedirect.js"></script>-->
 	<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/GolfCourse">
