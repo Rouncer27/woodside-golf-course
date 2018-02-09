@@ -108,6 +108,9 @@ function swb_register_sidebars() {
 		) );
 }
 
+
+require_once('includes/swb-theme-optimization.php');
+
 // Change the length of the excerpt and the read more tag. //
 require_once('includes/talk-to-much.php');
 // Change the logo and link on the login screen. //
