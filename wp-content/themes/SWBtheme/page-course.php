@@ -76,11 +76,6 @@
 								
 							</div>
 						</div>
-						<!-- <div class="bookit specials">
-							<img src="<?php echo get_template_directory_uri();?>/img/icons/circlegolf.png" alt="A colourful graphic of a golf ball on a tee" >
-							<a title="Book A Tee time, Click here!" href="<?php echo home_url(); ?>/specials/">See Our Specials</a>
-							<h4>Book A Tee Off!</h4>
-						</div> -->
 						<div class="bookingarea__downloadapp">
 							<h5>Download The Woodside Golf Course App</h5>
 							<a class="appa" target="_blank" title="Click to download our app from Apple" href="https://itunes.apple.com/app/id531879318"></a>
@@ -132,35 +127,6 @@
 								<p>Woodside has created a variety of popular league formats that provide full value when it comes to entertainment.  No matter what your level of play, there is a league option that is sure to be a fit for you.  We have developed both competitive and non-competitive options, along with men’s, ladies and mixed events - all with the primary goal of creating extraordinary moments through the game of golf.  2018 League Information will become available in March.  Many of these leagues sell-out in a matter of hours, so be sure to note the registration dates and times if you want to be apart of these great programs in 2018.</p>
 								<a title="Click here for more information on our leagues." href="<?php echo esc_url( home_url( '/leagues/' ) ); ?>" >More Info</a>
 							</div>
-							
-
-
-							<!-- <div class="leagues__container--header">
-								<h2>Our Leagues</h2>
-								<p>Creating insanely outrageous stories through league play</p>
-							</div>
-							<div class="leagues__container--details">
-
-								<div class="ladys">
-									<div><?php the_field( 'ladys' ); ?></div>
-								</div>
-								<div class="seniors">
-									<div><?php the_field( 'seniors' ); ?></div>
-								</div>
-								<div class="mens">
-									<div><?php the_field( 'mens' ); ?></div>
-								</div>
-								<div class="commercial">
-									<div><?php the_field( 'commercial' ); ?></div>
-								</div>
-
-								<div class="imagedetails">
-									
-								</div>	
-								<div class="juniors">
-									<div><?php the_field( 'juniors' ); ?></div>
-								</div>
-							</div> -->
 						</div>
 					</section>
 
