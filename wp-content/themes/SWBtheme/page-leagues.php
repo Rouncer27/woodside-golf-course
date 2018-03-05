@@ -148,9 +148,23 @@
                     <div class="swbleagues__item--content">
                         <p>These crazy ladies have focused their league experience on creating laughs wherever and whenever possible.  If you are looking for the perfect way to start your Wednesday, then come tee-it-up with the Woodside 18 Hole Lady T-Birds.  These gals play 18 holes beginning at 9:00am every Wednesday morning as part of a modified 9 hole shotgun.  Each week features a new, semi-competitive event format aimed at creating memorable stories to be shared with the group over lunch following the completion of play.</p>
                         <div class="buttons">
-                            <a target="_blank" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/leagues/League-Information.pdf">League Information</a>
-                            <a target="_blank" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/leagues/League-Information.pdf">Rate Sheet</a>
-                            <a target="_blank" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/leagues/League-Information.pdf">Standings</a>
+                            <?php
+                                $lteinfoPDFID = get_post_meta( get_the_id(), '_swb_tbirds_info', true );
+                                $lteinfoPDF = wp_get_attachment_url( $lteinfoPDFID );
+                            ?>
+                            <a target="_blank" href="<?php echo esc_url( $lteinfoPDF ); ?>">League Information</a>
+
+                            <?php
+                                $lteratePDFID = get_post_meta( get_the_id(), '_swb_tbirds_rate', true );
+                                $lteratePDF = wp_get_attachment_url( $lteratePDFID );
+                            ?>
+                            <a target="_blank" href="<?php echo esc_url( $lteratePDF ); ?>">Rate Sheet</a>
+
+                            <?php
+                                $ltestanPDFID = get_post_meta( get_the_id(), '_swb_tbirds_standings', true );
+                                $ltestanPDF = wp_get_attachment_url( $ltestanPDFID );
+                            ?>
+                            <a target="_blank" href="<?php echo esc_url( $ltestanPDF ); ?>">Standings</a>
 						</div>
                     </div>
                 </div>
