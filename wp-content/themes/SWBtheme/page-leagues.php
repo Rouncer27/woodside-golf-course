@@ -42,7 +42,7 @@
                                 $mslstanPDFID = get_post_meta( get_the_id(), '_swb_mixed_seniors_standings', true );
                                 $mslstanPDF = wp_get_attachment_url( $mslstanPDFID );
                             ?>
-                            <a target="_blank" href="<?php echo esc_url( $mslstanPDFID ); ?>">Standings</a>
+                            <a target="_blank" href="<?php echo esc_url( $mslstanPDF ); ?>">Standings</a>
 
 						</div>
                     </div>
