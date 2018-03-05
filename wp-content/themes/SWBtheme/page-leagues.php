@@ -179,9 +179,23 @@
                     <div class="swbleagues__item--content">
                         <p>Woodside’s Men’s League provides gents the opportunity to play 9 or 18 holes every Wednesday afternoon from 1:00pm until 6:30pm.  Scoring formats rotate monthly and a season long points format can win you some great prizing at the year-end event.  You book your own tee-times and set your own groups, so make sure you get some of your good friends to register to play with you.  The more often you play, the better your chances are of winning some of the over $8,000 in prizing at seasons end.  Food & Beverage specials abound, so you can enjoy a great meal and some cold beers with the fellas after you’ve completed your round.  This league has sold out each of the past 4 seasons, so be sure to make note of the registration time and date to avoid disappointment.</p>
                         <div class="buttons">
-                            <a target="_blank" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/leagues/League-Information.pdf">League Information</a>
-                            <a target="_blank" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/leagues/League-Information.pdf">Rate Sheet</a>
-                            <a target="_blank" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/leagues/League-Information.pdf">Standings</a>
+                            <?php
+                                $mnlinfoPDFID = get_post_meta( get_the_id(), '_swb_men’s_night_info', true );
+                                $mnlinfoPDF = wp_get_attachment_url( $mnlinfoPDFID );
+                            ?>
+                            <a target="_blank" href="<?php echo esc_url( $mnlinfoPDF ); ?>">League Information</a>
+
+                            <?php
+                                $mnlratePDFID = get_post_meta( get_the_id(), '_swb_men’s_night_rate', true );
+                                $mnlratePDF = wp_get_attachment_url( $mnlratePDFID );
+                            ?>
+                            <a target="_blank" href="<?php echo esc_url( $mnlratePDF ); ?>">Rate Sheet</a>
+
+                            <?php
+                                $mnlstanPDFID = get_post_meta( get_the_id(), '_swb_men’s_night_standings', true );
+                                $mnlstanPDF = wp_get_attachment_url( $mnlstanPDFID );
+                            ?>
+                            <a target="_blank" href="<?php echo esc_url( $mnlstanPDF ); ?>">Standings</a>
 						</div>	
                     </div>
 
