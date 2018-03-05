@@ -57,23 +57,23 @@
                     <div class="swbleagues__item--content">
                         <p>This league features 24 corporately sponsored teams that compete in weekly 9 hole match-play events on Monday’s throughout the golf season.  Each team can have a roster of up to 20 players, with 4 players competing for their team each week.  The league consists of 2 divisions, and all teams within a division will play each other once during the regular season.  All teams make playoffs and are seeded for a double elimination playoff.  If you are interested in entering a team into this league, see the league information sheet for full details.</p>
                         <div class="buttons">
-                        <?php
-                            $mclinfoPDFID = get_post_meta( get_the_id(), '_swb_mens_commercial_league_information', true );
-                            $mclinfoPDF = wp_get_attachment_url( $mclinfoPDFID );
-                        ?>
-                        <a target="_blank" href="<?php echo esc_url( $mclinfoPDF ); ?>">League Information</a>
+                            <?php
+                                $mclinfoPDFID = get_post_meta( get_the_id(), '_swb_mens_commercial_league_information', true );
+                                $mclinfoPDF = wp_get_attachment_url( $mclinfoPDFID );
+                            ?>
+                            <a target="_blank" href="<?php echo esc_url( $mclinfoPDF ); ?>">League Information</a>
 
-                        <?php
-                            $mclratePDFID = get_post_meta( get_the_id(), '_swb_mens_commercial_league_rate_sheet', true );
-                            $mclratePDF = wp_get_attachment_url( $mclratePDFID );
-                        ?>
-                        <a target="_blank" href="<?php echo esc_url( $mclratePDF ); ?>">Rate Sheet</a>
+                            <?php
+                                $mclratePDFID = get_post_meta( get_the_id(), '_swb_mens_commercial_league_rate_sheet', true );
+                                $mclratePDF = wp_get_attachment_url( $mclratePDFID );
+                            ?>
+                            <a target="_blank" href="<?php echo esc_url( $mclratePDF ); ?>">Rate Sheet</a>
 
-                        <?php
-                            $mclstanPDFID = get_post_meta( get_the_id(), '_swb_mens_commercial_league_standings', true );
-                            $mclstanPDF = wp_get_attachment_url( $mclstanPDFID );
-                        ?>
-                        <a target="_blank" href="<?php echo esc_url( $mclstanPDF ); ?>">Standings</a>
+                            <?php
+                                $mclstanPDFID = get_post_meta( get_the_id(), '_swb_mens_commercial_league_standings', true );
+                                $mclstanPDF = wp_get_attachment_url( $mclstanPDFID );
+                            ?>
+                            <a target="_blank" href="<?php echo esc_url( $mclstanPDF ); ?>">Standings</a>
 						</div>
                     </div>
                 </div>
@@ -87,9 +87,23 @@
                     <div class="swbleagues__item--content">
                         <p>The Ladies 9 Hole T-Birds provide a social, mostly non-competitive environment where gals come to meet, eat and play 9 holes of golf on Tuesday mornings beginning at 9:00am.  Fun and entertainment are the primary focus of this group, with prizes being awarded for games of chance.  The T-Birds provide an excellent opportunity for ladies who play golf casually to meet like minded individuals and enjoy the game without focusing on their scores.  Weekly lunch features are a big draw following play.</p>
                         <div class="buttons">
-                            <a target="_blank" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/leagues/League-Information.pdf">League Information</a>
-                            <a target="_blank" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/leagues/League-Information.pdf">Rate Sheet</a>
-                            <a target="_blank" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/leagues/League-Information.pdf">Standings</a>
+                            <?php
+                                $ltbinfoPDFID = get_post_meta( get_the_id(), '_swb_nine_tbirds_league', true );
+                                $ltbinfoPDF = wp_get_attachment_url( $ltbinfoPDFID );
+                            ?>
+                            <a target="_blank" href="<?php echo esc_url( $ltbinfoPDF ); ?>">League Information</a>
+
+                            <?php
+                                $ltbratePDFID = get_post_meta( get_the_id(), '_swb_nine_tbirds_rate', true );
+                                $ltbratePDF = wp_get_attachment_url( $ltbratePDFID );
+                            ?>
+                            <a target="_blank" href="<?php echo esc_url( $ltbratePDF ); ?>">Rate Sheet</a>
+
+                            <?php
+                                $ltbstanPDFID = get_post_meta( get_the_id(), '_swb_nine_tbirds_standings', true );
+                                $ltbstanPDF = wp_get_attachment_url( $ltbstanPDFID );
+                            ?>
+                            <a target="_blank" href="<?php echo esc_url( $ltbstanPDF ); ?>">Standings</a>
 						</div>
                     </div>
                 </div>
