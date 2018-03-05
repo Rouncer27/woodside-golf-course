@@ -27,12 +27,23 @@
                         <p>Senior Men and Women ages 55+ are invited to join us for 18 holes of play each Monday morning for a 9:00am modified shotgun start.  This league features both individual and team handicapped games each week that are designed to be relaxed, fun and provide  some friendly competition.  In addition, there are a number of special event days throughout the season, such as our annual Steak and Beans Team Event, where the winning team eats steak and losing team eats beans.  The game of golf provides us so many opportunities to create lasting impressions - join the Monday Morning Mixed Senior League in 2018 to be apart of some exceptional moments.</p>
                         <div class="buttons">
                             <?php
-                                $mslinfoPDFID = get_post_meta( get_the_id(), '_swb_league_information', true );
+                                $mslinfoPDFID = get_post_meta( get_the_id(), '_swb_mixed_seniors_league_information', true );
                                 $mslinfoPDF = wp_get_attachment_url( $mslinfoPDFID );
                             ?>
                             <a target="_blank" href="<?php echo esc_url( $mslinfoPDF ); ?>">League Information</a>
-                            <a target="_blank" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/leagues/League-Information.pdf">Rate Sheet</a>
-                            <a target="_blank" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/leagues/League-Information.pdf">Standings</a>
+
+                            <?php
+                                $mslratePDFID = get_post_meta( get_the_id(), '_swb_mixed_seniors_rate_sheet', true );
+                                $mslratePDF = wp_get_attachment_url( $mslratePDFID );
+                            ?>
+                            <a target="_blank" href="<?php echo esc_url( $mslratePDF ); ?>">Rate Sheet</a>
+
+                            <?php
+                                $mslstanPDFID = get_post_meta( get_the_id(), '_swb_mixed_seniors_standings', true );
+                                $mslstanPDF = wp_get_attachment_url( $mslstanPDFID );
+                            ?>
+                            <a target="_blank" href="<?php echo esc_url( $mslstanPDFID ); ?>">Standings</a>
+
 						</div>
                     </div>
                 </div>
