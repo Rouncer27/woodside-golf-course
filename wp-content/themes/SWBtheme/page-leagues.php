@@ -117,9 +117,23 @@
                     <div class="swbleagues__item--content">
                         <p>Every Tuesday Night you can have a guaranteed night out with your girls!  Weekly 5:30pm shotgun starts kick-off with an all new tailgate party format to transition you from the office to the golf course.  You pick the nights you want to play and register for them online in advance.  Should the weather not accommodate golf, then dinner, an adult beverage and prizes are on Woodside.  In the event of bad weather, we will even give you a complimentary 9 hole rain-check to play golf another time.  This league is extremely popular and sells out quickly, so secure your group of gals and note the registration time and date to avoid disappointment.</p>
                         <div class="buttons">
-                            <a target="_blank" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/leagues/League-Information.pdf">League Information</a>
-                            <a target="_blank" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/leagues/League-Information.pdf">Rate Sheet</a>
-                            <a target="_blank" href="<?php echo esc_url( get_template_directory_uri() ); ?>/img/leagues/League-Information.pdf">Standings</a>
+                            <?php
+                                $lnoinfoPDFID = get_post_meta( get_the_id(), '_swb_ladies_night_out_information', true );
+                                $lnoinfoPDF = wp_get_attachment_url( $lnoinfoPDFID );
+                            ?>
+                            <a target="_blank" href="<?php echo esc_url( $lnoinfoPDF ); ?>">League Information</a>
+
+                            <?php
+                                $lnoratePDFID = get_post_meta( get_the_id(), '_swb_ladies_night_out_rates', true );
+                                $lnoratePDF = wp_get_attachment_url( $lnoratePDFID );
+                            ?>
+                            <a target="_blank" href="<?php echo esc_url( $lnoratePDF ); ?>">Rate Sheet</a>
+
+                            <?php
+                                $lnostanPDFID = get_post_meta( get_the_id(), '_swb_ladies_night_out_standings', true );
+                                $lnostanPDF = wp_get_attachment_url( $lnostanPDFID );
+                            ?>
+                            <a target="_blank" href="<?php echo esc_url( $lnostanPDF ); ?>">Standings</a>
 						</div>
                     </div>
                 </div>
