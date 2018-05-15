@@ -71,9 +71,9 @@
 
                             <?php
                                 $mclstanPDFID = get_post_meta( get_the_id(), '_swb_mens_commercial_league_standings', true );
-                                $mclstanPDF = wp_get_attachment_url( $mclstanPDFID );
+                                //$mclstanPDF = wp_get_attachment_url( $mclstanPDFID );
                             ?>
-                            <a target="_blank" href="<?php echo esc_url( $mclstanPDF ); ?>">Standings</a>
+                            <a target="_blank" href="<?php echo esc_url(  $mclstanPDFID ); ?>">Standings</a>
 						</div>
                     </div>
                 </div>
@@ -101,9 +101,9 @@
 
                             <?php
                                 $ltbstanPDFID = get_post_meta( get_the_id(), '_swb_nine_tbirds_standings', true );
-                                $ltbstanPDF = wp_get_attachment_url( $ltbstanPDFID );
+                                //$ltbstanPDF = wp_get_attachment_url( $ltbstanPDFID );
                             ?>
-                            <a target="_blank" href="<?php echo esc_url( $ltbstanPDF ); ?>">Standings</a>
+                            <a target="_blank" href="<?php echo esc_url( $ltbstanPDFID ); ?>">Standings</a>
 						</div>
                     </div>
                 </div>
@@ -131,9 +131,9 @@
 
                             <?php
                                 $lnostanPDFID = get_post_meta( get_the_id(), '_swb_ladies_night_out_standings', true );
-                                $lnostanPDF = wp_get_attachment_url( $lnostanPDFID );
+                                //$lnostanPDF = wp_get_attachment_url( $lnostanPDFID );
                             ?>
-                            <a target="_blank" href="<?php echo esc_url( $lnostanPDF ); ?>">Standings</a>
+                            <a target="_blank" href="<?php echo esc_url( $lnostanPDFID ); ?>">Standings</a>
 						</div>
                     </div>
                 </div>
@@ -162,9 +162,9 @@
 
                             <?php
                                 $ltestanPDFID = get_post_meta( get_the_id(), '_swb_tbirds_standings', true );
-                                $ltestanPDF = wp_get_attachment_url( $ltestanPDFID );
+                                //$ltestanPDF = wp_get_attachment_url( $ltestanPDFID );
                             ?>
-                            <a target="_blank" href="<?php echo esc_url( $ltestanPDF ); ?>">Standings</a>
+                            <a target="_blank" href="<?php echo esc_url( $ltestanPDFID ); ?>">Standings</a>
 						</div>
                     </div>
                 </div>
