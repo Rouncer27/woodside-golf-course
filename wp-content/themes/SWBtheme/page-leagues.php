@@ -193,9 +193,9 @@
 
                             <?php
                                 $mnlstanPDFID = get_post_meta( get_the_id(), '_swb_men’s_night_standings', true );
-                                $mnlstanPDF = wp_get_attachment_url( $mnlstanPDFID );
+                                //$mnlstanPDF = wp_get_attachment_url( $mnlstanPDFID );
                             ?>
-                            <a target="_blank" href="<?php echo esc_url( $mnlstanPDF ); ?>">Standings</a>
+                            <a target="_blank" href="<?php echo esc_url( $mnlstanPDFID ); ?>">Standings</a>
 						</div>	
                     </div>
 
