@@ -104,10 +104,12 @@
 							while( $tournaments->have_posts() ) : $tournaments->the_post();
 						?>
 
-						<h2>Outings</h2>
+						<h2>Tournaments</h2>
 						<p><?php the_field( 'description' ); ?></p>
-						<a target="_blank" title="" href="<?php the_field( 'tournament_pdf' ); ?>">Tournaments</a>
+						<a target="_blank" title="" href="<?php the_field( 'tournament_pdf' ); ?>">Tournament Package</a>
 						<a target="_blank" title="" href="<?php the_field( 'advanced_groups_pdf' ); ?>">Advanced Groups</a>
+						<?php /* TODO: Need to add the pdf link here. */ ?>
+						<a target="_blank" title="" href="https://woodsidegc.com/course/#course-tourny">Club Events</a>
 
 					<?php endwhile; wp_reset_postdata(); ?>
 						</div>
