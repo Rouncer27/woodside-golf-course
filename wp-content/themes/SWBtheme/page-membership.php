@@ -77,17 +77,17 @@
 					<div class="membershipinfo__container--section">
 						<div class="membershipinfo__container--section--header">
 							<h2>Student Play</h2>
-							<p>Junior Seasonal Unlimited Play and Intermediate Seasonal Unlimited Play</p>
+							<p>Junior Seasonal Unlimited Play</p>
 						</div>
 						<div class="membershipinfo__container--section--content">
 							<div class="intro">
 								<h3>Junior Seasonal Unlimited Play</h3>
 								<p><?php the_field( 'junior_seasonal' ); ?><p>
 							</div>	
-							<div class="intro">
+							<!-- <div class="intro">
 								<h3>Intermediate Seasonal Unlimited Play</h3>
 								<p><?php the_field( 'intermediate_seasonal' ); ?><p>			
-							</div>
+							</div> -->
 							<div class="buttons student">
 								<a title="Click here to book now!" href="<?php the_field('student_dues_url'); ?>">Pay now</a>
 								<a target="_blank" href="<?php the_field( 'student_benefit_details_pdf' ); ?>">Information</a>
