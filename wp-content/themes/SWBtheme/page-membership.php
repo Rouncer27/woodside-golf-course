@@ -76,6 +76,26 @@
 
 					<div class="membershipinfo__container--section">
 						<div class="membershipinfo__container--section--header">
+							<h2>Young <span>Profressional</span></h2>
+							<p>Seasonal Unlimited Play</p>
+						</div>
+						<div class="membershipinfo__container--section--content">
+							<div class="intro">
+								<h3>Young Profressional Seasonal Unlimited Play</h3>
+								<p>Details Coming Soon<p>
+								<p class="contactchris"><a href="mailto:chris@woodsidegc.com" title="Contact Chris McNicol">Contact Chris McNicol for full details</a></p>	
+							</div>
+							<div class="buttons pre-paid">
+								<a>Details Coming Soon</a>
+								<a>Details Coming Soon</a>
+								<a>Details Coming Soon</a>
+							</div>			
+						</div>
+					</div>
+
+
+					<div class="membershipinfo__container--section">
+						<div class="membershipinfo__container--section--header">
 							<h2>Student Play</h2>
 							<p>Junior Seasonal Unlimited Play</p>
 						</div>
