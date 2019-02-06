@@ -76,12 +76,12 @@
 
 					<div class="membershipinfo__container--section">
 						<div class="membershipinfo__container--section--header">
-							<h2>Young <span>Profressional</span></h2>
+							<h2>Young <span>Professional</span></h2>
 							<p>Seasonal Unlimited Play</p>
 						</div>
 						<div class="membershipinfo__container--section--content">
 							<div class="intro">
-								<h3>Young Profressional Seasonal Unlimited Play</h3>
+								<h3>Young Professional Seasonal Unlimited Play</h3>
 								<p>Details Coming Soon<p>
 								<p class="contactchris"><a href="mailto:chris@woodsidegc.com" title="Contact Chris McNicol">Contact Chris McNicol for full details</a></p>	
 							</div>
