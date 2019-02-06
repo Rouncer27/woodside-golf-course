@@ -31,9 +31,9 @@
 								<p><?php the_field( 'personal_shareholder' ); ?><p>	
 							</div>
 							<div class="buttons unlimited">
-								<a title="Click here to book now!" href="<?php the_field('personal_shareholder_dues_url'); ?>">Pay Dues</a>
-								<a target="_blank" href="<?php the_field( 'personal_shareholder_pdf' ); ?>">Personal Benefits Details</a>
-								<a target="_blank" href="<?php the_field( 'personal_shareholder_schedule_pdf' ); ?>">Dues Schedule</a>
+								<a title="Click here to book now!" href="<?php the_field('personal_shareholder_dues_url'); ?>">Pay now</a>
+								<a target="_blank" href="<?php the_field( 'personal_shareholder_pdf' ); ?>">Information</a>
+								<a target="_blank" href="<?php the_field( 'personal_shareholder_schedule_pdf' ); ?>">Savings</a>
 							</div>
 							
 							
@@ -42,9 +42,9 @@
 								<p>There are a limited number of Seasonal Memberships available at Woodside Golf Course.  A Designate Membership provides you an opportunity to take over the Annual Dues commitment of a current Woodside Personal Shareholder for a single season.  Designates are provided all of the benefits associated with Personal Shareholder Membership at Woodside Golf Course.  If you are interested in experiencing an Unlimited Play Membership at Woodside this season, then contact us at 403.686.GOLF (4653) to instigate the creation of your Woodside story!<p>	
 							</div>
 							<div class="buttons unlimited">
-								<a target="_blank" href="https://woodsidegc.com/store/designateunlimiteddues/">Pay Dues</a>
-								<a target="_blank" href="https://woodsidegc.com/wp-content/uploads/2017/11/ShareUnlimitedMembershipInfo-2018.pdf">Personal Benefits Details</a>
-								<a target="_blank" href="https://woodsidegc.com/wp-content/uploads/2017/11/ShareUnlimitedDuesSchedule-2018.pdf">Dues Schedule</a>
+								<a target="_blank" href="https://woodsidegc.com/store/designateunlimiteddues/">Pay now</a>
+								<a target="_blank" href="https://woodsidegc.com/wp-content/uploads/2017/11/ShareUnlimitedMembershipInfo-2018.pdf">Information</a>
+								<a target="_blank" href="https://woodsidegc.com/wp-content/uploads/2017/11/ShareUnlimitedDuesSchedule-2018.pdf">Savings</a>
 							</div>	
 
 
@@ -66,9 +66,9 @@
 								<p class="contactchris"><a href="mailto:chris@woodsidegc.com" title="Contact Chris McNicol">Contact Chris McNicol for full details</a></p>	
 							</div>
 							<div class="buttons pre-paid">
-								<a title="Click here to book now!" href="<?php the_field('corporate_shareholder_dues_url') ?>">Pay Dues</a>
-								<a target="_blank" href="<?php the_field( 'pre-pay_play_pdf' ); ?>">Benefits Details</a>
-								<a target="_blank" href="<?php the_field( 'pre-pay_play_schedule_pdf' ); ?>">Dues Schedule</a>
+								<a title="Click here to book now!" href="<?php the_field('corporate_shareholder_dues_url') ?>">Pay now</a>
+								<a target="_blank" href="<?php the_field( 'pre-pay_play_pdf' ); ?>">Information</a>
+								<a target="_blank" href="<?php the_field( 'pre-pay_play_schedule_pdf' ); ?>">Savings</a>
 							</div>			
 						</div>
 					</div>
@@ -89,9 +89,9 @@
 								<p><?php the_field( 'intermediate_seasonal' ); ?><p>			
 							</div>
 							<div class="buttons student">
-								<a title="Click here to book now!" href="<?php the_field('student_dues_url'); ?>">Pay Dues</a>
-								<a target="_blank" href="<?php the_field( 'student_benefit_details_pdf' ); ?>">Student Benefits Details</a>
-								<a target="_blank" href="<?php the_field( 'student_benefit_dues_schedule_pdf' ); ?>">Dues Schedule</a>	
+								<a title="Click here to book now!" href="<?php the_field('student_dues_url'); ?>">Pay now</a>
+								<a target="_blank" href="<?php the_field( 'student_benefit_details_pdf' ); ?>">Information</a>
+								<a target="_blank" href="<?php the_field( 'student_benefit_dues_schedule_pdf' ); ?>">Savings</a>	
 							</div>	
 						</div>
 					</div>
@@ -108,8 +108,8 @@
 								
 							</div>
 							<div class="flex buttons">	
-								<a title="Click here to book now!" href="<?php the_field('flex_membership_dues_url'); ?>">Pay Dues</a>
-								<a target="_blank" href="<?php the_field( 'flex_benefit_details_pdf' ); ?>">Flex Benefits Details</a>
+								<a title="Click here to book now!" href="<?php the_field('flex_membership_dues_url'); ?>">Pay now</a>
+								<a target="_blank" href="<?php the_field( 'flex_benefit_details_pdf' ); ?>">Information</a>
 							</div>	
 						</div>
 					</div>
