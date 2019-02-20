@@ -126,7 +126,12 @@
 							</div>
 
 							<div class="leagues__content">
-								<p>Woodside has created a variety of popular league formats that provide full value when it comes to entertainment.  No matter what your level of play, there is a league option that is sure to be a fit for you.  We have developed both competitive and non-competitive options, along with men’s, ladies and mixed events - all with the primary goal of creating extraordinary moments through the game of golf.  2018 League Information will become available in March.  Many of these leagues sell-out in a matter of hours, so be sure to note the registration dates and times if you want to be apart of these great programs in 2018.</p>
+								<?php
+									$leagues_para = get_post_meta(get_the_ID(), '_wgc_leagues_intro_para', true );
+									if( $leagues_para ) {
+										echo wpautop( esc_html( $leagues_para ) );
+									}
+								?>
 								<a title="Click here for more information on our leagues." href="<?php echo esc_url( home_url( '/leagues/' ) ); ?>" >More Info</a>
 							</div>
 						</div>
