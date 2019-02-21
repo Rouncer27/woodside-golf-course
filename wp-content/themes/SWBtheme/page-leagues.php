@@ -24,7 +24,12 @@
                     </div>
 
                     <div class="swbleagues__item--content">
-                        <p>Senior Men and Women ages 55+ are invited to join us for 18 holes of play each Monday morning for a 9:00am modified shotgun start.  This league features both individual and team handicapped games each week that are designed to be relaxed, fun and provide  some friendly competition.  In addition, there are a number of special event days throughout the season, such as our annual Steak and Beans Team Event, where the winning team eats steak and losing team eats beans.  The game of golf provides us so many opportunities to create lasting impressions - join the Monday Morning Mixed Senior League in 2018 to be apart of some exceptional moments.</p>
+                        <?php
+                            $msl_para = get_post_meta(get_the_ID(), '_wgc_msl_content', true );
+                            if( $msl_para ) {
+                                echo wpautop( esc_html( $msl_para ) );
+                            }
+                        ?>
                         <div class="buttons">
                             <?php
                                 $mslinfoPDFID = get_post_meta( get_the_id(), '_swb_mixed_seniors_league_information', true );
@@ -55,7 +60,12 @@
                     </div>
 
                     <div class="swbleagues__item--content">
-                        <p>This league features 24 corporately sponsored teams that compete in weekly 9 hole match-play events on Monday’s throughout the golf season.  Each team can have a roster of up to 20 players, with 4 players competing for their team each week.  The league consists of 2 divisions, and all teams within a division will play each other once during the regular season.  All teams make playoffs and are seeded for a double elimination playoff.  If you are interested in entering a team into this league, see the league information sheet for full details.</p>
+                    <?php
+                            $mcl_para = get_post_meta(get_the_ID(), '_wgc_mcl_content', true );
+                            if( $mcl_para ) {
+                                echo wpautop( esc_html( $mcl_para ) );
+                            }
+                        ?>
                         <div class="buttons">
                             <?php
                                 $mclinfoPDFID = get_post_meta( get_the_id(), '_swb_mens_commercial_league_information', true );
@@ -85,7 +95,12 @@
                     </div>
 
                     <div class="swbleagues__item--content">
-                        <p>The Ladies 9 Hole T-Birds provide a social, mostly non-competitive environment where gals come to meet, eat and play 9 holes of golf on Tuesday mornings beginning at 9:00am.  Fun and entertainment are the primary focus of this group, with prizes being awarded for games of chance.  The T-Birds provide an excellent opportunity for ladies who play golf casually to meet like minded individuals and enjoy the game without focusing on their scores.  Weekly lunch features are a big draw following play.</p>
+                    <?php
+                            $ntbird_para = get_post_meta(get_the_ID(), '_wgc_ntbird_content', true );
+                            if( $ntbird_para ) {
+                                echo wpautop( esc_html( $ntbird_para ) );
+                            }
+                        ?>
                         <div class="buttons">
                             <?php
                                 $ltbinfoPDFID = get_post_meta( get_the_id(), '_swb_nine_tbirds_league', true );
@@ -115,7 +130,12 @@
                     </div>
 
                     <div class="swbleagues__item--content">
-                        <p>Every Tuesday Night you can have a guaranteed night out with your girls!  Weekly 5:30pm shotgun starts kick-off with an all new tailgate party format to transition you from the office to the golf course.  You pick the nights you want to play and register for them online in advance.  Should the weather not accommodate golf, then dinner, an adult beverage and prizes are on Woodside.  In the event of bad weather, we will even give you a complimentary 9 hole rain-check to play golf another time.  This league is extremely popular and sells out quickly, so secure your group of gals and note the registration time and date to avoid disappointment.</p>
+                    <?php
+                            $lno_para = get_post_meta(get_the_ID(), '_wgc_lno_content', true );
+                            if( $lno_para ) {
+                                echo wpautop( esc_html( $lno_para ) );
+                            }
+                        ?>
                         <div class="buttons">
                             <?php
                                 $lnoinfoPDFID = get_post_meta( get_the_id(), '_swb_ladies_night_out_information', true );
@@ -146,7 +166,12 @@
                     </div>
 
                     <div class="swbleagues__item--content">
-                        <p>These crazy ladies have focused their league experience on creating laughs wherever and whenever possible.  If you are looking for the perfect way to start your Wednesday, then come tee-it-up with the Woodside 18 Hole Lady T-Birds.  These gals play 18 holes beginning at 9:00am every Wednesday morning as part of a modified 9 hole shotgun.  Each week features a new, semi-competitive event format aimed at creating memorable stories to be shared with the group over lunch following the completion of play.</p>
+                    <?php
+                            $etbird_para = get_post_meta(get_the_ID(), '_wgc_etbird_content', true );
+                            if( $etbird_para ) {
+                                echo wpautop( esc_html( $etbird_para ) );
+                            }
+                        ?>
                         <div class="buttons">
                             <?php
                                 $lteinfoPDFID = get_post_meta( get_the_id(), '_swb_tbirds_info', true );
@@ -177,7 +202,12 @@
                     </div>
 
                     <div class="swbleagues__item--content">
-                        <p>Woodside’s Men’s League provides gents the opportunity to play 9 or 18 holes every Wednesday afternoon from 1:00pm until 6:30pm.  Scoring formats rotate monthly and a season long points format can win you some great prizing at the year-end event.  You book your own tee-times and set your own groups, so make sure you get some of your good friends to register to play with you.  The more often you play, the better your chances are of winning some of the over $8,000 in prizing at seasons end.  Food & Beverage specials abound, so you can enjoy a great meal and some cold beers with the fellas after you’ve completed your round.  This league has sold out each of the past 4 seasons, so be sure to make note of the registration time and date to avoid disappointment.</p>
+                    <?php
+                            $mn_para = get_post_meta(get_the_ID(), '_wgc_mn_content', true );
+                            if( $mn_para ) {
+                                echo wpautop( esc_html( $mn_para ) );
+                            }
+                        ?>
                         <div class="buttons">
                             <?php
                                 $mnlinfoPDFID = get_post_meta( get_the_id(), '_swb_men’s_night_info', true );
