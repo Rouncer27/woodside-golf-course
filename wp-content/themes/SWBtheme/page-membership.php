@@ -17,6 +17,74 @@
 			<div class="slogan">
 				<?php get_template_part( 'content/content', 'quote' ); ?>
 			</div>
+
+			<?php
+
+				$member_section_active = get_post_meta( get_the_ID(), '_wsc_membership_offe_active', true );
+				if( $member_section_active[0] === "yes" ) {
+
+					$member_offer_title = get_post_meta( get_the_ID(), '_wsg_membership_offer_title', true );
+					$member_offer_image_id = get_post_meta( get_the_ID(), '_wsg_membership_offer_image', true );
+					$member_offer_content = get_post_meta( get_the_ID(), '_wsg_membership_offer_content', true );
+					$member_offer_buttons = get_post_meta( get_the_ID(), '_wsg_membership_offer_btn', true );
+
+					if(	$member_offer_title && $member_offer_image_id && $member_offer_content ) {
+
+						$img_src_small = wp_get_attachment_image_src( $member_offer_image_id, 'offeringssmall' );
+          	$img_src_large = wp_get_attachment_image_src( $member_offer_image_id, 'offerings' );
+          	$img_alt = get_post_meta( $member_offer_image_id, '_wp_attachment_image_alt', true);
+
+			?>
+
+			<section class="woodfeatured">
+				<div class="woodfeatured__wrapper">
+					<div class="woodfeatured__header">
+						<h2><?php echo esc_html( $member_offer_title ); ?></h2>
+					</div>
+					<div class="woodfeatured__image">
+						<picture>
+							<source srcset="<?php echo esc_url( $img_src_large[0] ); ?>" media="(min-width: 768px)">
+							<source srcset="<?php echo esc_url( $img_src_small[0] ); ?>" media="(min-width: 320px)">
+							<img src="<?php echo esc_url( $img_src_large[0] ); ?>" alt="<?php echo esc_attr( $img_alt ); ?>">
+						</picture>
+					</div>
+
+					<div class="woodfeatured__content">
+						<?php echo wpautop( esc_html( $member_offer_content ) ); ?>
+					</div>
+
+						<?php if( $member_offer_buttons ) { ?>
+
+					<div class="woodfeatured__buttons">
+							<?php
+								for( $i = 0; $i < $member_offer_buttons; $i++ ) {
+									$member_offer_button_text = get_post_meta( get_the_ID(), '_wsg_membership_offer_btn_' . $i . '_button_text', true );
+									$member_offer_button_type = get_post_meta( get_the_ID(), '_wsg_membership_offer_btn_' . $i . '_button_type', true );
+									if( $member_offer_button_type === 'pdf' ) {
+										$member_offer_button_pdf = get_post_meta( get_the_ID(), '_wsg_membership_offer_btn_' . $i . '_button_pdf', true );
+										echo '<a target="_blank" href="' . esc_url( $member_offer_button_pdf ) . '">' . esc_html( $member_offer_button_text ) . '</a>';
+									} else if( $member_offer_button_type === 'link' ) {
+										$member_offer_button_email = get_post_meta( get_the_ID(), '_wsg_membership_offer_btn_' . $i . '_button_email', true );
+										echo '<a target="_blank" href="mailto:' . antispambot( $member_offer_button_email ) . '">' . esc_html( $member_offer_button_text ) . '</a>';
+
+									} else if( $member_offer_button_type === 'email' ) {
+										$member_offer_button_link = get_post_meta( get_the_ID(), '_wsg_membership_offer_btn_' . $i . '_button_link', true );
+										echo '<a href="' . esc_url( $member_offer_button_link ) . '">' . esc_html( $member_offer_button_text ) . '</a>';
+									}
+							?>
+
+							<?php } ?>
+					</div>
+
+						<?php } ?>
+
+				</div>
+			</section>
+
+				<?php } ?>
+			<?php } ?>
+
+
 			<section class="membershipinfo">
 				<div class="membershipinfo__container">
 					<div class="membershipinfo__container--section">

@@ -23,6 +23,9 @@ add_image_size( 'main', 1000, 440, true );
 add_image_size( 'eventsfront', 500, 500, true );
 add_image_size( 'outrageousfront', 250, 250, true );
 
+add_image_size( 'offeringssmall', 500, 500, false);
+add_image_size( 'offerings', 2000, 2000, false);
+
 //   ***   These are where we include style sheets that may be need for our project.   ***   //
 function switchback_styles() {
 	wp_enqueue_style( 'main', get_template_directory_uri() . '/css/style.css' );
