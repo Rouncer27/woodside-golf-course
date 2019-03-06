@@ -61,7 +61,7 @@
 									$member_offer_button_text = get_post_meta( get_the_ID(), '_wsg_membership_offer_btn_' . $i . '_button_text', true );
 									$member_offer_button_type = get_post_meta( get_the_ID(), '_wsg_membership_offer_btn_' . $i . '_button_type', true );
 									if( $member_offer_button_type === 'pdf' ) {
-										$member_offer_button_pdf = get_post_meta( get_the_ID(), '_wsg_membership_offer_btn_' . $i . '_button_pdf', true );
+										$member_offer_button_pdf = wp_get_attachment_url( get_post_meta( get_the_ID(), '_wsg_membership_offer_btn_' . $i . '_button_pdf', true ) );
 										echo '<a target="_blank" href="' . esc_url( $member_offer_button_pdf ) . '">' . esc_html( $member_offer_button_text ) . '</a>';
 									} else if( $member_offer_button_type === 'link' ) {
 										$member_offer_button_email = get_post_meta( get_the_ID(), '_wsg_membership_offer_btn_' . $i . '_button_email', true );
